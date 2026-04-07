@@ -1,4 +1,6 @@
 <script lang="ts">
+	/* eslint-disable svelte/no-at-html-tags */
+	import Prism from 'prismjs';
 	let previewEl: HTMLDivElement | null | undefined = $state();
 	let code = $state('');
 	let tab = $state<'preview' | 'code'>('preview');
@@ -12,10 +14,51 @@
 	});
 
 	function format(html: string) {
-		return html
-			.trim()
-			.replace(/>\s+</g, '>\n<')
-			.replace(/\n\s*\n/g, '\n');
+		let formatted = '';
+		let indent = 0;
+		const voidElements = new Set([
+			'area',
+			'base',
+			'br',
+			'col',
+			'embed',
+			'hr',
+			'img',
+			'input',
+			'link',
+			'meta',
+			'param',
+			'source',
+			'track',
+			'wbr'
+		]);
+		const tagRegex = /<\/?([a-zA-Z0-9-]+)(\s[^>]*)?>|([^<]+)/g;
+		let match: RegExpExecArray | null;
+		let noCommentHtml = html.replace(/<!--[\s\S]*?-->/g, '');
+		while ((match = tagRegex.exec(noCommentHtml)) !== null) {
+			if (match[1]) {
+				const tagName = match[1].toLowerCase();
+				const isClosingTag = match[0].startsWith('</');
+				const isVoidElement = voidElements.has(tagName);
+
+				if (isClosingTag) {
+					indent = Math.max(indent - 1, 0);
+				}
+
+				formatted += '  '.repeat(indent) + match[0].trim() + '\n';
+
+				if (!isClosingTag && !isVoidElement) {
+					indent++;
+				}
+			} else if (match[3]) {
+				const text = match[3].trim();
+				if (text) {
+					formatted += '  '.repeat(indent) + text + '\n';
+				}
+			}
+		}
+
+		return Prism.highlight(formatted, Prism.languages.html, 'html').trim();
 	}
 </script>
 
@@ -59,8 +102,8 @@
 				{@render children()}
 			</div>
 		{:else}
-			<pre class="overflow-x-auto rounded-xl bg-slate-900 p-4 text-sm text-slate-100">
-<code>{code}</code>
+			<pre class="language-html overflow-x-auto rounded-xl bg-(--tw-prose-pre-bg) p-4 text-sm">
+<code>{@html code}</code>
 			</pre>
 		{/if}
 	</div>

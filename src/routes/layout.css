@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Geist+Mono:wght@100..900&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
@@ -34,6 +34,7 @@
 @theme {
 	--font-sans: 'Rethink Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 	--font-serif: 'Old Standard TT', serif;
+	--font-mono: 'Geist Mono', monospace;
 }
 
 @layer components {
