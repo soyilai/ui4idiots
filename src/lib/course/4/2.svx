@@ -1,0 +1,71 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+
+Ever set your heading to 48px, your subheading to 36px, your card title to 30px, and your label to 18px, then wondered why everything feels “meh”? That's the problem with random sizes.
+
+If all your sizes are kinda big, nothing is really big. If everything is bold, nothing stands out. A type scale fixes this by using math instead of guessing.
+
+## The “Goldilocks” Problem
+
+If all your font sizes are kinda big, nothing is *really* big. If everything is bold, nothing is bold. Enter: the type scale.
+
+## What's a Type Scale, Anyway
+
+A small, intentional family of font sizes with a clear relationship. Instead of 10 random numbers, you pick 5–8 sizes that work together. The trick? Math!
+
+Pick a base size (16px) and multiply by a ratio:
+
+- **Major Third (1.25):** 12, 15, 19, 24, 30, 36
+- **Major Second (1.125):** 14, 16, 18, 20, 22, 25 (subtle)
+- **Golden Ratio (1.618):** 10, 16, 26, 42, 68 (dramatic)
+
+Or just use a pre-built scale (hello, Tailwind boys!):
+
+```
+xs   → 12px  (labels, metadata)
+sm   → 14px  (secondary body)
+base → 16px  (primary body)
+lg   → 18px  (large body, card titles)
+xl   → 20px  (small headings)
+2xl  → 24px  (medium headings)
+3xl  → 30px  (large headings)
+4xl  → 36px  (hero subheadings)
+5xl  → 48px  (hero headings)
+```
+
+Use 4–5 of these per interface, not all of them.
+
+## Before: Weak Hierarchy
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg space-y-2">
+    <p class="text-xl font-bold text-gray-900">Page Title</p>
+    <p class="text-lg font-bold text-gray-900">Section Heading</p>
+    <p class="text-base font-bold text-gray-900">Card Title</p>
+    <p class="text-sm font-bold text-gray-900">Label</p>
+  </div>
+</Preview>
+
+All bold, sizes too close together. Hierarchy is unclear.
+
+## After: Clear Steps
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-4">
+    <h1 class="text-3xl font-bold text-gray-900 leading-tight">Page Title</h1>
+    <h2 class="text-xl font-semibold text-gray-700">Section Heading</h2>
+    <h3 class="text-base font-semibold text-gray-600">Card Title</h3>
+    <p class="text-sm text-gray-400 uppercase tracking-wide font-medium">Category Label</p>
+  </div>
+</Preview>
+
+Each level is unmistakably different. Hierarchy is obvious.
+
+## Quick Recap (No Funny Title For This One Either)
+
+- A type scale is a small set of sizes with clear relationships.
+- Use 4–5 sizes per interface.
+- Skip steps between levels so differences are obvious.
+- Consistent scale is more important than individual font choices.

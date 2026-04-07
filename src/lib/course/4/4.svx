@@ -1,0 +1,67 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+
+There are a handful of typography errors that get made again and again. They're not taste issues, they’re “why does my app look like a ransom note?” issues. Here are the repeat offenders and how to fix them.
+
+### Problem 1: Invisible Text
+
+Light weight, small size, pale color on white. Nobody with less-than-perfect vision can read this. Don't use light gray for important content.
+
+Fix: Use regular weight minimum, 14px or larger, and darker gray.
+
+### Crime 2: Justified Text on the Web
+
+Justified text creates awkward spaces between words and makes paragraphs look broken. Browsers aren't books.
+
+Fix: Left-align body text. Always.
+
+### Crime 3: All-Caps Body Text
+
+Reading all-caps takes 10–13% longer. It's like shouting in a monotone.
+
+Fix: Use all-caps only for short labels (2–4 words), badges, and category tags. Never for paragraphs.
+
+### Crime 4: No Type Hierarchy
+
+Everything the same size and weight means nothing stands out. It's a choir where everyone sings the same note.
+
+Fix: Use a type scale with at least 3–4 different size/weight combinations.
+
+### Crime 5: Decorative Fonts for Body
+
+That handwritten or display font you love? Gorgeous at 48px in a hero. At 14px in a paragraph, it’s a migraine.
+
+Fix: Use personality fonts for headlines only. Pair with a readable sans-serif for body.
+
+### Crime 6: Tight Line Height
+
+Default line height is fine for headlines. For body text, it's a wall of words.
+
+Fix: Use 1.6 or higher line height for all body text.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg space-y-6">
+    <div>
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">The Mistakes</p>
+      <p class="text-xs text-gray-300 font-light leading-tight">ghost text: too light, too small</p>
+      <p class="text-sm text-gray-700 uppercase leading-tight mt-1">ALL CAPS BODY TEXT SLOWS READING.</p>
+    </div>
+    <div>
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Fixed</p>
+      <p class="text-sm text-gray-600 leading-relaxed">Readable text: visible, comfortable, usable.</p>
+      <p class="text-xs text-gray-400 uppercase tracking-widest mt-1 font-medium">Short Label Only</p>
+    </div>
+  </div>
+</Preview>
+
+## Don't Go To Font Jail
+
+- Pale text: never for body. Use gray-600 minimum on white.
+- Font weight 300: almost never. Use 400 minimum.
+- Justified: avoid on the web.
+- All-caps: labels only, never full paragraphs.
+- Display fonts: headlines only.
+- Line height: 1.6 minimum for all body text.
+- Most problems come from prioritizing vibes over readability. Fix them before you ship.

@@ -1,0 +1,69 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Ever feel like your UI is yelling at you, but you can’t tell what it’s saying? That’s noise. Not the fun kind with guitars, the kind that makes users’ brains go "nope!" and click away.
+
+The urge to add another border, another icon, another shadow? That's your inner raccoon. Ignore it. Most of the time, the answer isn't "add more." It's "subtract until it feels bare, then add one thing back."
+
+## What’s Actually Making All That Racket?
+
+- Borders where space would do the job
+- Dividers between things that are already separate
+- Labels that repeat what's obvious
+- Icons explaining text that already explains itself
+- Shadows everywhere
+- Three background colors in one region
+
+## Before: Visual Overload
+
+<Preview>
+  <div class="p-4 bg-white font-sans max-w-sm border rounded-lg divide-y divide-gray-200">
+    <div class="flex items-center gap-3 py-3 bg-gray-50">
+      <div class="w-5 h-5 bg-blue-400 rounded text-white text-xs flex items-center justify-center"></div>
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wide">File Name</div>
+        <div class="text-sm font-medium text-gray-700">report-final.pdf</div>
+      </div>
+      <div class="ml-auto border border-gray-200 text-xs text-gray-500 px-2 py-0.5 rounded">PDF</div>
+    </div>
+    <div class="flex items-center gap-3 py-3">
+      <div class="w-5 h-5 bg-green-400 rounded text-white text-xs flex items-center justify-center"></div>
+      <div>
+        <div class="text-xs text-gray-400 uppercase tracking-wide">File Name</div>
+        <div class="text-sm font-medium text-gray-700">notes.docx</div>
+      </div>
+      <div class="ml-auto border border-gray-200 text-xs text-gray-500 px-2 py-0.5 rounded">DOCX</div>
+    </div>
+    <p class="pt-2 text-xs text-gray-400">Borders + alt rows + labels + type badges = visual noise.</p>
+  </div>
+</Preview>
+
+## After: Cleaner
+
+<Preview>
+  <div class="p-4 bg-white font-sans max-w-sm border border-gray-100 rounded-lg shadow-sm space-y-1">
+    <div class="flex items-center gap-3 px-2 py-2.5 hover:bg-gray-50 rounded-md cursor-pointer transition-colors">
+      <div class="w-8 h-8 bg-red-50 rounded-md flex items-center justify-center text-red-500 text-sm font-bold">PDF</div>
+      <div>
+        <p class="text-sm font-medium text-gray-800">report-final.pdf</p>
+        <p class="text-xs text-gray-400">2.4 MB · Modified today</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 px-2 py-2.5 hover:bg-gray-50 rounded-md cursor-pointer transition-colors">
+      <div class="w-8 h-8 bg-blue-50 rounded-md flex items-center justify-center text-blue-500 text-sm font-bold">DOC</div>
+      <div>
+        <p class="text-sm font-medium text-gray-800">notes.docx</p>
+        <p class="text-xs text-gray-400">48 KB · Modified yesterday</p>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+## The “Marie Kondo” Test for UI
+
+Ask yourself about each element:
+
+1. If I delete this, will anyone miss it? If not, delete it.
+2. Is this thing just repeating what something else already says? (If yes, pick a favorite and move on.)
+3. Would a user even notice if it vanished? If not, remove it.

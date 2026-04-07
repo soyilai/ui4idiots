@@ -1,0 +1,55 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+You’ve got a wide screen, a tall container, and a button that looks like it’s been on a crash diet. Instinct says: “Stretch it! Fill the space!”
+
+When you see leftover space, your brain screams "fix it." But that space is breathing room. Forcing elements to fill every pixel is like stuffing a suitcase until it explodes. (Nobody wants UI socks flying everywhere.)
+
+The best layouts? Elements at natural size, surrounded by intentional space. Not everything needs to be stretched.
+
+## Stretch Armstrong Traps
+
+- **Full-width buttons everywhere** — Only on mobile, or when you need to shout.
+- **Stretched cards for one line** — Full width with minimal content looks awkward, not spacious.
+- **Oversized headings** — Display size is for actual display content, not every headline.
+- **Equally-tall elements** — If your sidebar is as tall as your content, you've got a skyscraper problem.
+
+## Before: Bloated
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg space-y-4 w-full">
+    <h3 class="text-lg font-bold text-gray-900 w-full text-center">Are you sure?</h3>
+    <div class="bg-red-50 border border-red-200 rounded p-4 w-full text-center">
+      <p class="text-sm text-red-700 w-full">This will permanently delete your account and all associated data.</p>
+    </div>
+    <button class="bg-red-600 text-white text-sm font-medium px-4 py-2 rounded w-full">Delete my account</button>
+    <button class="border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded w-full">Cancel</button>
+  </div>
+</Preview>
+
+## After: Proportional
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-4">
+    <h3 class="text-base font-semibold text-gray-900">Delete your account?</h3>
+    <p class="text-sm text-gray-500 leading-relaxed">This action is permanent. All your data, settings, and history will be removed.</p>
+    <div class="flex gap-3 justify-end">
+      <button class="text-sm font-medium text-gray-600 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors">
+        Cancel
+      </button>
+      <button class="bg-red-600 hover:bg-red-700 text-white text-sm font-medium px-4 py-2 rounded-md transition-colors">
+        Yes, delete
+      </button>
+    </div>
+  </div>
+</Preview>
+
+The destructive button is only as wide as its content needs. The safe option is smaller because canceling is the cautious choice. Whitespace frames everything instead of competing with it.
+
+## Until it Bursts
+
+- Leftover space is breathing room, not a bug.
+- Don't stretch everything to fill the container.
+- Let elements be their natural size.
+- Use padding and alignment to distribute space, not element inflation.

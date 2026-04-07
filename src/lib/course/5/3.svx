@@ -1,0 +1,76 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+"I'll make the text slightly gray... it looks more modern." Then nobody can actually read it. Contrast isn't about aesthetics. It’s about whether people can actually read your UI, or if they’ll need a magnifying glass and a prayer..
+
+## The Standards
+
+WCAG (the accessibility police) says:
+- **3:1** — minimum for large text (18px+ or 14px+ bold)
+- **4.5:1** — minimum for normal body text
+- **7:1** — preferred for easy reading
+
+Check your ratios at contrast-ratio.com or in your browser's DevTools.
+
+The "trendy light gray on white" look? Often fails even for large text.
+
+## What Actually Works
+
+On white background:
+
+```
+gray-300  → 1.6:1   fails
+gray-400  → 2.5:1   fails
+gray-500  → 3.9:1   passes large text only
+gray-600  → 5.9:1   passes everything
+gray-700  → 8.5:1   solid
+gray-800  → 12.6:1  strong
+gray-900  → 17.4:1  almost black
+```
+
+Body text: use gray-600 minimum. Prefer gray-700 or darker.
+
+Placeholder text and secondary metadata: gray-500 is acceptable.
+
+White text on colored buttons: check the background color. A light blue isn't enough. You need at least blue-600.
+
+## Before: Light Gray Everywhere
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg space-y-3">
+    <h3 class="text-lg font-semibold text-gray-300">Welcome back</h3>
+    <p class="text-sm text-gray-300 leading-relaxed">Here's what's happening in your account today. Everything looks great — no issues to report.</p>
+    <div class="flex gap-2">
+      <button class="bg-blue-300 text-white text-sm px-4 py-2 rounded font-medium">Get started</button>
+      <span class="text-xs text-gray-300 self-center">or sign in</span>
+    </div>
+    <p class="text-xs text-red-400 mt-1">Most of this fails contrast minimum.</p>
+  </div>
+</Preview>
+
+## After: Accessible Contrast
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-3">
+    <h3 class="text-lg font-semibold text-gray-900">Welcome back</h3>
+    <p class="text-sm text-gray-600 leading-relaxed">Here's what's happening in your account today. Everything looks great — no issues to report.</p>
+    <div class="flex items-center gap-3">
+      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2.5 rounded-md font-medium transition-colors">Get started</button>
+      <span class="text-sm text-gray-500">or <span class="text-blue-600 cursor-pointer font-medium">sign in</span></span>
+    </div>
+  </div>
+</Preview>
+
+Gray-900 for the heading, gray-600 for body, blue-600 for the button. All pass their minimum contrast.
+
+## Simple Check
+
+Install a contrast checker browser extension. Look at three text-heavy elements in your current project. Any failing? Fix them now.
+
+## Mom, That Shirt Doesn't Have Enough Contrast With My Hair!
+
+- Body text minimum: gray-600 on white. Better: gray-700 or darker.
+- Check buttons: white text needs blue-600 or darker background.
+- Use DevTools or a checker. Your eyes lie.
+- Don't optimize for light rooms or perfect vision. Accessible contrast works for everyone.

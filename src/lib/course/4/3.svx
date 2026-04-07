@@ -1,0 +1,41 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Ever read a paragraph so wide your eyes needed GPS to find the next line? Or so narrow it felt like a grocery receipt? There's a sweet spot: 45 to 75 characters per line.
+
+When you finish a line, your eye jumps back to the start of the next. Too short and you're jumping constantly (exhausting). Too long and you lose your place and read the same line twice.
+
+The 45–75 character range is the “Goldilocks Zone” for reading. Not too long, not too short, just right.
+
+## How To Cheat
+
+Counting characters is tedious. Just use a max-width constraint that limits text to around 65 characters. Done.
+
+## Before: Too Wide
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-2xl border rounded-lg">
+    <h3 class="text-lg font-bold text-gray-900 mb-3">Our Approach</h3>
+    <p class="text-base text-gray-700 leading-relaxed">
+      We believe that great products are built through rigorous iteration, honest feedback, and a deep respect for the people who will ultimately use them. This means shipping early, listening closely, and never confusing motion for progress. We've learned that the teams who build the best things aren't the ones with the most resources — they're the ones who ask the clearest questions.
+    </p>
+  </div>
+</Preview>
+
+## After: Comfortable Width
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-2xl border border-gray-100 rounded-xl shadow-sm">
+    <h3 class="text-lg font-bold text-gray-900 mb-3">Our Approach</h3>
+    <p class="text-base text-gray-700 leading-relaxed max-w-prose">
+      We believe that great products are built through rigorous iteration, honest feedback, and a deep respect for the people who will ultimately use them. This means shipping early, listening closely, and never confusing motion for progress.
+    </p>
+  </div>
+</Preview>
+
+## Don't Make Me Zigzag
+
+- Ideal line length: 45–75 characters.
+- Too long: hard to find the next line. Too short: choppy.
+- Headlines are the exception, they can stretch wider.

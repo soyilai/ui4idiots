@@ -1,0 +1,77 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+
+Both borders and shadows draw boundaries around elements. Both separate them from surroundings. But they mean different things. Don't mix them up.
+
+## What They Say (If They Could Talk)
+
+**A border says:** "This element has a defined edge on the same surface as everything around it."
+
+**A shadow says:** "This element is elevated above the surface. It's floating."
+
+This is the key distinction. Borders are surface-level. Shadows imply elevation.
+
+## When to Use Each
+
+**Use borders when:**
+- The element is on the same visual plane
+- You want a crisp or editorial aesthetic
+- You're separating two areas of the same surface
+- You're building tables, lists, or forms
+- You want subtle definition without depth
+
+**Use shadows when:**
+- The element is above the surface (dropdown, card, modal)
+- You want to imply interactivity
+- You're in a dimensional UI style
+- Borders would feel too geometric
+
+**Use neither when:**
+- Background color change is enough
+- Whitespace already creates grouping
+- The element is purely decorative
+
+## Rules of Engagement
+
+- Don't use both a border AND a shadow on the same element.
+- In flat UI: use only borders. In dimensional UI: use only shadows for cards.
+- Form inputs are the exception: a border plus a focus ring is standard.
+- Light gray borders barely show, use them when you want faint definition.
+- Use dividers (borders between list items) instead of bottom borders on each item.
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-xl border border-gray-100 rounded-xl grid grid-cols-2 gap-6 shadow-sm">
+    <div class="space-y-3">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Border world</p>
+      <div class="border border-gray-200 rounded-lg p-4">
+        <p class="text-sm font-semibold text-gray-800">Card</p>
+        <p class="text-xs text-gray-500 mt-1">Border only. Same plane. No elevation.</p>
+      </div>
+      <div class="border border-gray-200 rounded-lg divide-y divide-gray-100">
+        <div class="px-3 py-2 text-sm text-gray-700">List item 1</div>
+        <div class="px-3 py-2 text-sm text-gray-700">List item 2</div>
+        <div class="px-3 py-2 text-sm text-gray-700">List item 3</div>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Shadow world</p>
+      <div class="rounded-lg p-4 shadow-md">
+        <p class="text-sm font-semibold text-gray-800">Card</p>
+        <p class="text-xs text-gray-500 mt-1">Shadow only. Floating. Elevated.</p>
+      </div>
+      <div class="rounded-lg p-4 shadow-lg">
+        <p class="text-sm font-semibold text-gray-800">Modal</p>
+        <p class="text-xs text-gray-500 mt-1">Bigger shadow. Highest elevation.</p>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+## Quick Recap
+
+- Borders are same-plane. Shadows are elevated.
+- Don't use both on one element.
+- Flat UI: borders. Dimensional UI: shadows. Just space: neither.
+- Use dividers for list separators, not individual borders on items.

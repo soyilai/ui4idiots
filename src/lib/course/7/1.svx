@@ -1,0 +1,76 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+## Images: The Make-or-Break Ingredient
+
+A bad image choice ruins an otherwise solid design. A great image makes a mediocre layout look polished. Image selection is a design skill, not luck.
+
+## Four Common Failures
+
+1. **Unrelated stock photos:** A team of attractive people in a glass office who are definitely not your users, for a product they would never use.
+2. **Inconsistent style:** Three photos that were clearly shot by different photographers on different planets.
+3. **Wrong aspect ratio:** A compressed image stretched to fill a space it wasn’t designed for. Ouch.
+4. **Competing with content:** A busy, colorful image behind text that needs to be read.
+
+## What Good Images Do
+
+- Match your product's personality
+- Have consistent color grading across all images
+- Depict things your users recognize
+- Support content instead of fighting it
+
+## Aspect Ratios That Matter
+
+```
+1:1   → avatars, thumbnails
+4:3   → classic photography
+16:9  → video, wide banners
+3:2   → editorial photos, cards
+2:3   → portrait, mobile hero
+```
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-3">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Consistent card grid</p>
+    <div class="grid grid-cols-2 gap-3">
+      <div class="rounded-lg overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-stone-200 to-stone-300 flex items-center justify-center text-stone-500 text-xs">photo 1</div>
+        <div class="pt-2">
+          <p class="text-sm font-medium text-gray-800">Ceramic Mug</p>
+          <p class="text-xs text-gray-500">$24</p>
+        </div>
+      </div>
+      <div class="rounded-lg overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-stone-200 to-stone-300 flex items-center justify-center text-stone-500 text-xs">photo 2</div>
+        <div class="pt-2">
+          <p class="text-sm font-medium text-gray-800">Linen Tote</p>
+          <p class="text-xs text-gray-500">$38</p>
+        </div>
+      </div>
+      <div class="rounded-lg overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-stone-200 to-stone-300 flex items-center justify-center text-stone-500 text-xs">photo 3</div>
+        <div class="pt-2">
+          <p class="text-sm font-medium text-gray-800">Wool Blanket</p>
+          <p class="text-xs text-gray-500">$95</p>
+        </div>
+      </div>
+      <div class="rounded-lg overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-stone-200 to-stone-300 flex items-center justify-center text-stone-500 text-xs">photo 4</div>
+        <div class="pt-2">
+          <p class="text-sm font-medium text-gray-800">Desk Lamp</p>
+          <p class="text-xs text-gray-500">$49</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+All containers have the same aspect ratio. The consistent warm-stone background simulates a consistent photography style. The grid reads unified.
+
+## Quick Recap
+
+- Bad images: unrelated stock photos, inconsistent styles, wrong aspect ratios.
+- Good images: consistent color, appropriate subject, fixed aspect ratio containers.
+- Use fixed aspect ratios so images never distort.
+- Visual consistency across images matters as much as individual quality.

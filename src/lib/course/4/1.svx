@@ -1,0 +1,50 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Most people think typography is about picking a font that screams “I have taste!” (Comic Sans, anyone?). But real typography is about making words so easy to read your users forget they’re even reading. A boring font that's comfy to read beats a fancy font that makes people squint.
+
+## The Readability Checklist
+
+When text is easy to read, users just get the message. When it's hard, they work for it, and nobody signed up for that.
+
+The five things that matter:
+
+1. **Size** — Anything under 15px on the web is basically unreadable and exclusively for legal disclaimers. 16–18px is the comfort zone for body text.
+2. **Line height** — Too tight and lines blur together. 1.6 or higher for body text.
+3. **Line length** — 45–75 characters per line is ideal. Over 80 gets hard to follow. Under 40 feels choppy.
+4. **Contrast** — Black on white is the standard. Don't go below 4.5:1 contrast for body text.
+5. **Letter spacing** — Leave it alone for body text. For all-caps labels, add space.
+
+## Before: My Eyes Hurt
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-2xl border rounded-lg">
+    <p class="text-xs text-gray-400 leading-tight tracking-widest">
+      THE PROBLEM WITH MAKING TEXT SMALL AND USING CAPS AND TIGHT LINE HEIGHTS IS THAT THE READER ACTUALLY HAS TO WORK HARD TO PARSE EACH LINE BECAUSE THE EYE CANNOT EASILY DISTINGUISH THE SHAPES OF LETTERFORMS IN UPPERCASE AND THE LINES ALL BLEED INTO EACH OTHER WITHOUT ADEQUATE SPACING.
+    </p>
+  </div>
+</Preview>
+
+## After: Comfortable
+
+<Preview>
+  <div class="p-6 bg-white font-sans border border-gray-100 rounded-xl shadow-sm">
+    <div class="max-w-prose">
+      <p class="text-base text-gray-800 leading-relaxed">
+        The problem with making text small and using caps and tight line heights is that the reader actually has to work hard to parse each line. The eye can't distinguish letterforms easily in uppercase, and lines bleed into each other without adequate spacing.
+      </p>
+    </div>
+  </div>
+</Preview>
+
+## Quick Test: The 80-Character Rule
+
+Find a paragraph in your work. Count the characters in the longest line. Over 80? Add a max-width. Font under 15px? Increase it. That's usually all you need.
+
+## Don't Make Me Squint
+
+- Readability beats fancy.
+- Five factors: size, line height, line length, contrast, letter spacing.
+- Body text minimum: 16px, 1.6 line height, max 75 characters wide, 4.5:1 contrast.
+- Never use all-caps for body text. Never go below 15px.

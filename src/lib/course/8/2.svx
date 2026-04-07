@@ -1,0 +1,89 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+The first thing many users see is an empty state: no data, no content, no nothing. Most empty states are a missed opportunity: a gray box with vague text like "No items yet." Let's make them actually useful.
+
+## What Empty States Do
+
+When there's nothing to show, the screen has three jobs:
+
+1. **Explain what's missing and why** — User just arrived, hasn't added anything yet
+2. **Tell the user what to do** — The clearest next step
+3. **Make it feel worthwhile** — This should feel like the beginning of something, not a dead end
+
+## Two Types
+
+**First-time empty:** User just arrived. This is your onboarding moment. Tone: welcoming, encouraging.
+
+**Zero-result empty:** User searched or filtered and got nothing. This is your recovery moment. Tone: helpful, non-blaming.
+
+## Anatomy of a Good Empty State
+
+1. **Illustration or icon** — Something contextual, not generic
+2. **Title** — Explains the situation
+3. **Body** — What to do about it, briefly
+4. **Call to action** — The single next step
+
+## Polishing Your Emptiness
+
+- Every empty state needs a call to action. Never just text.
+- Don't blame users ("You haven't added anything" → "Nothing here yet").
+- Use meaningful icons, not generic empty boxes.
+- For zero-result states: suggest next steps (clear filters, check spelling, browse).
+- Keep it short: heading + one sentence + button.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-6">
+    <div class="space-y-2">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Missed opportunity</p>
+      <div class="border border-dashed border-gray-200 rounded-lg p-6 text-center">
+        <p class="text-sm text-gray-400">No tasks yet.</p>
+      </div>
+    </div>
+    <div class="space-y-2">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Welcoming start</p>
+      <div class="border border-dashed border-gray-200 rounded-lg p-6 text-center space-y-3">
+        <div class="w-12 h-12 mx-auto bg-blue-50 rounded-xl flex items-center justify-center text-2xl">
+          ✅
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-gray-800">Nothing on your list yet</p>
+          <p class="text-xs text-gray-500 mt-1">Add your first task to start tracking your work.</p>
+        </div>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium px-4 py-2 rounded-md transition-colors">
+          Add your first task
+        </button>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+The good state has all four elements: contextual icon, helpful title, brief body, and direct CTA. The tone is friendly and action-oriented.
+
+## Zero-Result Pattern
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm">
+    <div class="text-center space-y-3">
+      <div class="w-12 h-12 mx-auto bg-gray-100 rounded-xl flex items-center justify-center text-2xl">
+        🔍
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-gray-800">No results for "unicorn"</p>
+        <p class="text-xs text-gray-500 mt-1">Try a different search term, or browse all categories.</p>
+      </div>
+      <div class="flex gap-2 justify-center">
+        <button class="text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded transition-colors">Clear search</button>
+        <button class="text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded transition-colors">Browse all</button>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+## Quick Recap
+
+- Empty states have three jobs: explain, direct, encourage.
+- Two types: first-time (onboarding) and zero-result (recovery).
+- Four components: icon, title, body, CTA. All are required.
+- Never just text. Never blame the user.

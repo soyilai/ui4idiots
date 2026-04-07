@@ -1,0 +1,77 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+## Physical Mockups: The Cardboard Truth Test
+
+Not all design happens on screens. Before a product ships, before packaging goes to print, before a sign gets installed, there's a phase where cardboard, paper, and tape teach you things no digital tool can. This lesson is about applying design thinking to physical constraints, and why your printer is your best friend.
+
+When you hold a physical prototype, you notice if a button is in the wrong place for your thumb. You see if the font is too small to read across a table. You feel if a form is too cramped. Physical mockups are the real-world squint test.
+
+## What Transfers From Screen
+
+- **Hierarchy is the same.** On a printed form or label, the most important info must be visually dominant. One primary, clear secondary, quiet tertiary.
+- **Spacing is the same.** Consistent internal spacing, larger between-group spacing. The ratio is what matters.
+- **Typography rules apply.** Minimum readable size, appropriate line height, no all-caps body text.
+- **Color restraint is the same.** A package with six brand colors is as confusing as a dashboard with six accent colors.
+
+## What's Different
+
+- **Material costs money.** Generous whitespace on paper is a design choice that costs physical space.
+- **Real-world lighting varies.** Labels might be read under fluorescent, sunlight, or dim warehouse lighting. Contrast needs to account for this.
+- **Fabrication has constraints.** Some printing processes can't handle certain colors or effects. Your font needs to render at the print resolution.
+- **Touch changes perception.** Paper weight, texture, fold—these affect how people perceive quality. The same design on newsprint feels cheap. On heavy matte stock, it feels premium.
+
+## The Paper Prototype Process
+
+1. Print your design at actual size on regular paper.
+2. Cut it out. Fold if needed. Tape it in place.
+3. Stand back. Look from the distance it will be seen.
+4. Try to "use" it. Fill in form fields. Fold it. Hold it.
+5. Note what feels wrong. Fix it. Print again.
+
+## Rules
+
+- Always test physical mockups at actual viewing distance and in actual lighting.
+- Never finalize size or proportion without a physical print at actual scale.
+- Consider the full context: what will this sit next to? What lighting?
+- For packaging: use the same hierarchy. Brand should be loudest. Utility info is secondary.
+- Minimum body text for print: 9pt at 300 DPI. Preferred: 11pt or more.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-5">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Design principles apply everywhere</p>
+    <div class="space-y-2">
+      <p class="text-xs text-gray-400">Brochure cover</p>
+      <div class="bg-stone-800 rounded-lg p-5 aspect-video flex flex-col justify-between">
+        <p class="text-xs text-stone-400 tracking-widest uppercase">Annual Report 2025</p>
+        <div>
+          <h3 class="text-xl font-black text-white leading-tight">Growing<br/>Together</h3>
+          <p class="text-sm text-stone-400 mt-2">Mira Foundation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+The same principles apply: clear hierarchy, consistent spacing, color restraint, legible type.
+
+## The Transfer Test
+
+After finishing any UI project, ask:
+- Could this hierarchy work on a printed page?
+- Would the spacing still make sense if I printed and cut this out?
+- Does the color palette work without a backlit screen?
+
+If yes to all three, you've learned good design, not just screen design.
+
+## Quick Exercise
+
+Print your current UI project at 100%. Pin it to a wall. Stand 2 meters back. Can you read the primary action and main headline without moving closer? If not, fix the hierarchy. Walk closer and check that secondary information makes sense. This takes 10 minutes and teaches you more than an hour tweaking on-screen.
+
+## Quick Recap
+
+- Physical design follows the same hierarchy, spacing, type, and color rules as screen.
+- What changes: material costs, viewing conditions, fabrication constraints, tactile perception.
+- The paper prototype process reveals problems no screen preview can.
+- The same principles that make great UI make great posters, labels, and forms. The application changes, not the rules.

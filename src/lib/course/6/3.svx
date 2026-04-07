@@ -1,0 +1,82 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+
+Every UI lives somewhere between “completely flat” (no shadows, no gradients, no depth) and “fully dimensional” (heavy shadows, gradients, textures). Both look great. The only real mistake? Getting stuck in the middle with no clear intention.
+
+## What Each Extreme Looks Like
+
+**Flat UI:**
+- Solid colors, no gradients
+- No shadows (or borders only)
+- High-contrast color blocks
+- Feels clean, modern, sometimes cold
+
+**Dimensional UI:**
+- Subtle gradients on surfaces
+- Layered shadows at different elevations
+- Borders that suggest material
+- Feels warm, tactile, premium, sometimes heavy
+
+Most production UIs sit in the middle, but they make a clear choice about which direction to lean.
+
+## How to Choose
+
+**Go flatter if:**
+- Content is your product (text, data, media)
+- You want technical or minimal vibes
+- You're building tools, dashboards, docs
+- You want a timeless look
+
+**Go more dimensional if:**
+- You want premium, physical, or warm feeling
+- Your product has emotional, consumer qualities
+- You're building landing pages or card-based apps
+- You want to feel established and tactile
+
+## The Middle Path: Subtle Dimension
+
+You don't need to go full skeuomorphic. A few techniques create dimension without heaviness:
+- Small shadows on cards
+- Slightly lighter gradient on button tops
+- Thin borders that suggest material
+
+## Commit to Your Choice
+
+- Pick a direction and stick to it.
+- Flat and dimensional elements on the same page create confusion.
+- In flat UI, use borders instead of shadows.
+- In dimensional UI, maintain consistent elevation. Same height gets the same shadow.
+
+Neither is better. The only wrong choice is mixing them randomly.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-xl border border-gray-100 rounded-xl grid grid-cols-2 gap-6 shadow-sm">
+    <div class="space-y-3">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Flat</p>
+      <div class="border border-gray-200 rounded-lg p-4">
+        <p class="text-sm font-semibold text-gray-900">Card title</p>
+        <p class="text-xs text-gray-500 mt-1">Border only. Clean edge. Same plane.</p>
+        <button class="mt-3 bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded">Action</button>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Dimensional</p>
+      <div class="rounded-lg p-4 shadow-md" style="background: linear-gradient(160deg, #ffffff 0%, #f8f9fb 100%);">
+        <p class="text-sm font-semibold text-gray-900">Card title</p>
+        <p class="text-xs text-gray-500 mt-1">Shadow and gradient. Lifted.</p>
+        <button class="mt-3 text-white text-xs font-medium px-3 py-1.5 rounded shadow-sm" style="background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);">Action</button>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+Both are internally consistent. The flat card uses only borders. The dimensional card uses shadows and gradients. Neither looks wrong, they just have different personalities.
+
+## Quick Recap
+
+- Flat and dimensional are both valid. Uncommitted mixing is not.
+- Flat: borders for separation, no shadows, high contrast.
+- Dimensional: soft shadows, subtle gradients, clear elevation system.
+- Choose your direction based on product personality and stick to it.

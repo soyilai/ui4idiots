@@ -1,0 +1,110 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+    import Image from "$lib/components/Image.svelte"
+</script>
+
+You open Figma. 
+
+
+Or VS Code. 
+
+
+Or Notepad, if you’re feeling spicy. 
+
+
+*The cursor blinks.*
+
+
+*You blink back.*
+
+
+It’s a staring contest, and *you’re losing*.
+
+
+Congratulations! You’ve just experienced the #1 killer of side projects: The Blank Screen Panic™. (It’s like stage fright, but for pixels.)
+
+## Wait, Why Am I Frozen? (Besides the Obvious Lack of Coffee)
+
+You’re trying to design, decide, and dazzle all at once. That’s like trying to cook dinner, set the table and wash the dishes simultaneously, only your wife can do that, and you’ll probably lose a finger (or your motivation).
+
+Let’s not do that. Let’s do this instead:
+
+## The Three Dumb Questions That Make You a Genius
+
+Before you drag a single rectangle, ask yourself (or your rubber duck, or your cat):
+
+1. **What’s the ONE thing this screen must do?**
+   (If you say “everything,” you get a time-out.)
+
+2. **Who’s looking at this, and what do they already know?**
+   (Designing for Grandma? Maybe skip the 8-bit hacker font.)
+
+3. **What happens next?**
+   (Every screen is a bus stop. Where’s the bus going?)
+
+Say them out loud. Whisper them. Write them on your hand. Tattoo them on your dog. Just don’t skip them.
+
+## How to Fail at UI Design (A Tragic Play in One Act)
+
+You: “Let’s pick a color scheme!”
+
+Also you: “Ooh, fonts!”
+
+Still you: “I’ll just make a quick navbar…”
+
+One hour later: You have a Pinterest board, a headache, and exactly zero UI.
+
+<Preview>
+  <div class="p-8 bg-white font-sans space-y-4 border border-dashed border-gray-300 rounded-lg max-w-sm">
+    <div class="h-4 bg-purple-200 rounded w-3/4"></div>
+    <div class="h-4 bg-purple-100 rounded w-1/2"></div>
+    <div class="h-32 bg-gray-100 rounded flex items-center justify-center text-gray-400 text-sm">
+      ??? (still deciding the vibe)
+    </div>
+    <div class="flex gap-2">
+      <div class="h-8 bg-purple-300 rounded w-24"></div>
+      <div class="h-8 bg-gray-200 rounded w-24"></div>
+    </div>
+    <p class="text-xs text-gray-400 text-center">2 hours later. Still no content. (But hey, nice mood board!)</p>
+  </div>
+</Preview>
+
+Moral of the story: Don’t sweat the small stuff (yet). Grab a fat marker and sketch your idea. If you can’t fit it with a Sharpie, you’re overthinking it. (Also, Sharpies smell nice. But don’t sniff them too long.)
+
+## The Navbar Trap (And Other UI Booby Traps)
+
+Designing a navbar before you know what your app does is like building a garage for a car you haven’t bought. Maybe you don’t even need a navbar! Google didn’t. (And they seem to be doing okay.)
+
+<Image src="/11-googlefrontpage.png" alt="Google Frontpage" epi="Google frontpage" />
+
+So then, what's the correct way? Here's an idea:
+
+You write the headline first. Then the supporting line. Then the call to action. Then you worry about color.
+ 
+<Preview>
+  <div class="p-8 bg-white font-sans space-y-4 max-w-sm border border-gray-200 rounded-lg shadow-sm">
+    <h2 class="text-2xl font-bold text-gray-900">Save your reading list</h2>
+    <p class="text-gray-500 text-sm leading-relaxed">Bookmark articles, highlight quotes, and come back to them whenever you want.</p>
+    <button class="bg-gray-900 text-white text-sm font-medium px-5 py-2.5 rounded-md w-full">
+      Create free account
+    </button>
+    <p class="text-xs text-gray-400 text-center">No credit card. No nonsense.</p>
+  </div>
+</Preview>
+
+ 
+The second example was built in this exact order:
+
+1. Write the headline (answers: what does this do?)
+2. Write the subline (answers: why should I care? users don't care about you!1!11, surprising, right?)
+3. Write the button (answers: what do I do next?)
+4. Add the footnote (answer an objection)
+ 
+No color, no font, no nothing yet! But it *looks* and *communicates* good.
+
+## Quick Recap
+
+- Don't start with color or fonts. Start with content.
+- Avoid starting in any navigation elements.
+- Answer three questions before touching anything.
+- The first version is a draft, give yourself permission to make it bad!

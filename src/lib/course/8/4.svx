@@ -1,0 +1,116 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+The default styles that browsers apply to HTML elements are… fine. They’re functional. But “functional” and “designed” are not the same thing. Here’s how to reset and rebuild your baseline so you’re not starting from a place of browser mediocrity.
+
+## What the Browser Gets Wrong
+
+**Headings:** Too much space between sizes. Default line height is too loose.
+
+**Paragraphs:** No max-width. Default margins create inconsistent rhythm.
+
+**Links:** That blue underline works for articles. For apps, it's noise.
+
+**Buttons:** Browser defaults look like 1996.
+
+**Inputs:** Look like the operating system, not your product.
+
+**Lists:** Default padding and bullets add clutter in UI contexts.
+
+## The Reset Philosophy
+
+Three goals:
+
+1. Remove browser quirks
+2. Set reasonable typographic defaults
+3. Leave semantic HTML still working
+
+Tailwind's `@tailwind base` handles most of this.
+
+## Essential Overrides (Because You Deserve Better)
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-6">
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div class="space-y-2">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Browser defaults</p>
+        <div style="font-family: Times New Roman; line-height: 1.2;">
+          <h3 style="font-size: 1.17em; font-weight: bold; margin: 1em 0 0.5em;">Heading</h3>
+          <p style="margin-bottom: 1em;">Body with serif font and loose spacing.</p>
+          <a href="#" style="color: #0000ee; text-decoration: underline;">Default link</a>
+          <br/><br/>
+          <button style="appearance: auto; padding: 2px 6px;">Button</button>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Reset defaults</p>
+        <div class="font-sans">
+          <h3 class="text-base font-semibold text-gray-900 mb-1">Heading</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3">Body with sans-serif and intentional spacing.</p>
+          <a href="#" class="text-blue-600 font-medium hover:underline">Styled link</a>
+          <br/><br/>
+          <button class="bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded">Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+## Minimum CSS Reset
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+```
+
+The most critical: `box-sizing: border-box`. Without it, width calculations are nightmares.
+
+Set `font: inherit` on form elements so they use your chosen font, not the system font.
+
+Set `display: block` on images to eliminate the awkward baseline gap below inline images.
+
+Use `-webkit-font-smoothing: antialiased` for crisper fonts on Mac.
+
+## Quick Exercise
+
+Create a new HTML file with no styles. Add a heading, paragraph, link, button, and input. Look at what the browser gives you. Now add the reset above and see how much better your starting point is.
+
+## Quick Recap
+
+- Browser defaults are functional but not designed.
+- `box-sizing: border-box` is the single most important reset.
+- Form elements need `font: inherit` to use your chosen font.
+- Images need `display: block` to eliminate baseline gaps.
+- Tailwind's `@tailwind base` handles most resets for you.

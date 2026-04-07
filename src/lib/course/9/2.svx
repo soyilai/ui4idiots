@@ -1,0 +1,76 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+# Billboards & Signs: Design for the Blink of an Eye
+
+A billboard has about 3 seconds of attention from a driver going 60 mph. A sign at the end of a hallway is read from 20 meters away. These aren’t just “bigger UI”, they follow completely different rules about what information even belongs, and how it should be sized. Let’s make your message readable at warp speed.
+
+## The Distance Rule
+
+Here's the fundamental constraint: type legibility depends on size.
+
+Rough guide: **1 inch of letter height ≈ 100 feet of readable distance** (in good conditions).
+
+This means:
+- A 4" headline reads from ~400 feet
+- A 0.5" body text on the same sign is invisible beyond 50 feet
+- A 1-inch pixel at 10 feet is fine. At 200 feet it blurs.
+
+## Implications
+
+- **Reduce to one message.** A billboard has 3 seconds and 7 words maximum. Headline and maybe a URL.
+- **Heavy typeface only.** Light fonts disappear at distance. Use black or extrabold weights.
+- **Extreme contrast.** The 4.5:1 ratio is for close-up screens. Outdoor signage needs 7:1 minimum. Black on white or white on black.
+- **No decorative type.** The pretty display font in your logo often fails at distance. Use condensed grotesques like Helvetica Condensed.
+
+## Scale by Distance
+
+| Distance    | Min Type Height | Weight          |
+|-------------|-----------------|-----------------|
+| 3m (indoor) | 48pt            | Bold            |
+| 10m         | 150pt           | Extrabold       |
+| 50m         | 300pt           | Black/Condensed |
+| 100m        | 600pt+          | Black only      |
+
+## Rules
+
+- Never put body text on outdoor signage. If you can't say it in 7 words, don't.
+- Use heavy, condensed, or black-weight fonts. Not regular or light.
+- High-contrast pairs only: black/white, black/yellow, white/dark blue.
+- Test at actual distance before printing. What looks fine on screen fails at 30 meters.
+- For digital signs: text must be visible mid-scroll.
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-xl border border-gray-100 rounded-xl shadow-sm space-y-5">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Billboard comparison</p>
+    <div class="bg-white border-2 border-gray-300 rounded-lg p-5 space-y-2">
+      <p class="text-xs font-bold text-gray-900">Smith & Partners Financial Planning</p>
+      <p class="text-xs text-gray-600">We offer personalized financial advice for retirement, investment, and estate planning. Call today to schedule a free consultation with one of our 30 advisors.</p>
+      <p class="text-xs text-blue-600">1-800-SMITH-FIN · smithandpartnersfinancial.com</p>
+      <p class="text-xs text-gray-400 text-center mt-2">Too much text. Unreadable at highway speed.</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-6 text-center">
+      <p class="text-3xl font-black text-white tracking-tight leading-none">
+        Retire<br/>
+        Smarter.
+      </p>
+      <p class="text-base font-bold text-yellow-400 mt-3">SmithFinancial.com</p>
+      <p class="text-xs text-gray-400 text-center mt-4">6 words. One URL. Readable at 300 feet.</p>
+    </div>
+  </div>
+</Preview>
+
+The good billboard: two pieces of information, white on black, yellow accent for the URL. A driver at 60 mph reads this in full.
+
+## Quick Exercise
+
+Print a sign and walk away. At 3m, 6m, 10m—when does the text become unreadable? That's your legibility limit. Now think about your actual viewing distance.
+
+## Quick Recap
+
+- Signage follows an inverse of normal UI design: less information is always better.
+- 7 words maximum for highway billboards. One call to action.
+- Heavy/black weight fonts only. Regular weight disappears at distance.
+- Test by simulating actual viewing distance before finalizing.
+- Distance rule: 1 inch letter height ≈ 100 feet readable distance.

@@ -1,0 +1,69 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+The brain is always looking for patterns. It automatically groups things that are close together, and separates things that are far apart. If you ignore this, your layout will feel confusing even when the content is perfectly correct. (It’s not you, it’s the spacing.)
+
+## Proximity Is Meaning
+
+This is called the Law of Proximity, but forget the fancy name. The practical rule is: **things that are close together look related**, like fries and ketchup.
+
+Put a label three pixels above a field and it looks related. Put it three pixels above the next field by accident, and now it looks like *that* label. This is how bad forms happen, and how good ones get ruined.
+
+## The Two Dimensions of Grouping 
+
+You group with **space** and you separate with **space**. More space between two things = less related. Less space = more related. (It’s that simple.)
+
+You can also use containers (cards, boxes, backgrounds) to group, but reach for whitespace first. Containers add visual weight. Whitespace is free and calorie-free.
+
+- Things in the same group should be closer to each other than to things in different groups.
+- Use consistent internal spacing within groups.
+- Use noticeably more space between groups than within them.
+- Labels belong to the element directly below or beside them, not equidistant between two elements.
+- Form fields are the most common grouping failure. Each label should clearly “own” its field.
+
+## What Goes Wrong (A Cautionary Tale)
+
+A form where the spacing between label and field is the same as the spacing between fields. Labels become ambiguous.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg space-y-4">
+    <p class="text-sm text-gray-600">First name</p>
+    <input class="border border-gray-300 rounded w-full px-3 py-2 text-sm" placeholder="Jordan" />
+    <p class="text-sm text-gray-600">Last name</p>
+    <input class="border border-gray-300 rounded w-full px-3 py-2 text-sm" placeholder="Smith" />
+    <p class="text-sm text-gray-600">Email</p>
+    <input class="border border-gray-300 rounded w-full px-3 py-2 text-sm" placeholder="jordan@email.com" />
+    <p class="text-xs text-gray-400">Equal spacing = ambiguous ownership. Which label belongs to which field?</p>
+  </div>
+</Preview>
+
+## What Works (The Happy Ending)
+
+Labels are grouped tightly with their field. More space separates the field groups from each other. Suddenly, everything makes sense.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-200 rounded-lg shadow-sm space-y-5">
+    <div class="space-y-1">
+      <label class="text-sm font-medium text-gray-700 block">First name</label>
+      <input class="border border-gray-200 rounded-md w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Jordan" />
+    </div>
+    <div class="space-y-1">
+      <label class="text-sm font-medium text-gray-700 block">Last name</label>
+      <input class="border border-gray-200 rounded-md w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Smith" />
+    </div>
+    <div class="space-y-1">
+      <label class="text-sm font-medium text-gray-700 block">Email</label>
+      <input class="border border-gray-200 rounded-md w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="jordan@email.com" />
+    </div>
+  </div>
+</Preview>
+
+This ratio creates clear reading levels without needing borders, backgrounds, or dividers. (Whitespace for the win!)
+
+## Quick Recap
+
+- Proximity implies relationship. Close = related. Far = separate.
+- Use whitespace as your primary grouping tool before reaching for boxes.
+- Labels must sit closer to their own element than to adjacent elements.
+- The within/between space ratio is the key: inside tight, outside spacious.

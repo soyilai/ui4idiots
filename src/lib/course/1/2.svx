@@ -1,0 +1,90 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Every tragic UI disaster starts the same way: someone thought, “Ooh, pretty colors!” before asking, “Wait, what is this thing supposed to do?”
+
+Flip that script. Your life (and your users’ sanity) will improve instantly.
+
+## Every Screen Is an Employee (And Most Are Bad at Their Jobs)
+
+Imagine every screen in your app is a new hire. Each one gets a job description. Login screen? “Get people in the door, no bouncers allowed.” Pricing page? “Help people pick a plan, not a panic attack.” Settings? “Let users change stuff without breaking the universe.”
+
+If a screen tries to do too many jobs, it ends up like that one coworker who microwaves fish in the break room: nobody’s happy.
+
+Here’s the magic trick: Once you know the screen’s purpose, most design decisions make themselves. Seriously!
+
+- If the job is “get the user to sign up,” the sign-up form should be the Beyoncé of the page, front and center.
+- If the job is “show the user their data,” then, uh... show the data. Duh.
+- If the job is “let the user pick a plan,” make the plans pop like confetti at a kid’s birthday party.
+
+You don’t have to “design” these choices. They just… happen. Like gravity, but for good UI.
+
+## When Screens Forget Their Job (A Soap Opera)
+
+Here’s a sign-up page that’s having an identity crisis. It’s got a banner, a testimonial, a newsletter invite, AND a sign-up form. It’s the Swiss Army knife of confusion.
+
+<Preview>
+  <div class="p-4 bg-white font-sans space-y-3 max-w-sm border rounded-lg text-sm">
+    <div class="bg-blue-600 text-white p-4 rounded text-center font-bold text-base">
+      🎉 Summer Sale — 40% Off Everything!
+    </div>
+    <div class="border p-3 rounded text-gray-500 italic text-xs">
+      "This product changed my life." — A. Customer
+    </div>
+    <div class="border p-3 rounded space-y-1">
+      <p class="font-medium text-gray-700">Subscribe to our newsletter</p>
+      <input class="border rounded w-full px-2 py-1 text-xs" placeholder="your@email.com" />
+    </div>
+    <div class="border p-3 rounded space-y-1">
+      <p class="font-medium text-gray-700">Create account</p>
+      <input class="border rounded w-full px-2 py-1 text-xs" placeholder="Name" />
+      <button class="bg-gray-300 text-gray-600 text-xs px-3 py-1 rounded w-full">Sign up</button>
+    </div>
+    <p class="text-xs text-gray-400 text-center">Everything competes. Nothing wins. (Except maybe the banner.)</p>
+  </div>
+</Preview>
+
+## The Makeover Montage: One Job, One Winner
+
+Now, let’s give this page a purpose: get the user to create an account. Everything else either disappears or gets out of the way.
+
+<Preview>
+  <div class="p-6 bg-white font-sans space-y-4 max-w-sm border rounded-lg shadow-sm">
+    <div>
+      <h2 class="text-xl font-bold text-gray-900">Create your account</h2>
+      <p class="text-sm text-gray-500 mt-1">It takes about 30 seconds. (We timed it. With a stopwatch.)</p>
+    </div>
+    <div class="space-y-2">
+      <input class="border border-gray-200 rounded-md w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your name" />
+      <input class="border border-gray-200 rounded-md w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email address" />
+      <input class="border border-gray-200 rounded-md w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Password" type="password" />
+    </div>
+    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-4 py-2.5 rounded-md w-full transition-colors">
+      Create account
+    </button>
+    <p class="text-xs text-center text-gray-400">Already have an account? <span class="text-blue-500 cursor-pointer">Sign in</span></p>
+  </div>
+</Preview>
+ 
+
+ 
+Since the sign-up form is the only thing on the page, there's nothing competing for attention. If the user arrived wanting to create an account, the screen wants exactly the same thing.
+ 
+
+## Auditing
+ 
+Take a page you're working on right now. Write its purpose in 10 words. Then circle every element that doesn't directly serve that purpose. Those are your candidates for removal or demotion.
+ 
+Before finishing any screen, ask each element:
+- Does this help the user complete the screen's purpose? → Keep it.
+- Does it reduce friction toward that purpose? → Keep it.
+- Does it answer a question the user would have? → Keep it.
+- Does it serve anything else? → Cut it or move it somewhere else.
+ 
+## Quick Recap (Because You'll Forget)
+ 
+- Every screen has one job. Find it and protect it.
+- Purpose makes design decisions automatic.
+- Competing elements dilute focus.
+- Audit every element: does it serve the screen's purpose?

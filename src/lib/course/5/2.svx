@@ -1,0 +1,89 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Most people pick colors by spinning a wheel and copying the hex code. Then they wonder why their UI looks like a mystery novel: full of clues, but nothing makes sense.
+
+The problem? Hex is a robot language. HSL is for humans.
+
+## What HSL Actually Means
+
+- **H — Hue:** Where on the color wheel? 0° = red, 120° = green, 240° = blue, 360° = red again. Like a color merry-go-round.
+- **S — Saturation:** How colorful? 0% = pure gray, 100% = full intensity.
+- **L — Lightness:** How much light? 0% = black, 100% = white, 50% = true color.
+
+So `hsl(220, 80%, 55%)` is: blue-ish, pretty saturated, medium lightness. You can *imagine* it before you see it. Magic!
+
+### HSL ≠ HSB (Don’t Get Fooled)
+
+Brightness in HSB is not the same as lightness in HSL. HSB’s 100% brightness is only white if saturation is 0%. In HSL, 100% lightness is always white. Just use HSL, browsers do.
+
+## Why Designers Should Care
+
+With HSL, you can:
+- **Make a color lighter** by increasing L. Same hue, same saturation, just more light.
+- **Mute a color** by decreasing S. It goes from “party” to “library.”
+- **Create a hover state** by dropping L by 10. Always looks right.
+- **Build a tint background** with the same H and S, but L at 95%. Perfect for alert boxes.
+
+None of this is obvious in hex.
+
+## Button States: The Real Power
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-3">
+    <p class="text-xs text-gray-400 font-medium uppercase tracking-wide">Button States — Same Hue, Different Lightness</p>
+    <button class="w-full py-2.5 rounded-md text-sm font-medium text-white" style="background: hsl(220, 80%, 65%)">
+      Default — L: 65%
+    </button>
+    <button class="w-full py-2.5 rounded-md text-sm font-medium text-white" style="background: hsl(220, 80%, 55%)">
+      Hover — L: 55%
+    </button>
+    <button class="w-full py-2.5 rounded-md text-sm font-medium text-white" style="background: hsl(220, 80%, 45%)">
+      Active — L: 45%
+    </button>
+    <button class="w-full py-2.5 rounded-md text-sm font-medium" style="background: hsl(220, 25%, 92%); color: hsl(220, 20%, 60%)">
+      Disabled — S: 25%, L: 92%
+    </button>
+  </div>
+</Preview>
+
+All the same hue, just different lightness and saturation. Hover is darker, disabled is desaturated and lighter.
+
+## Semantic Color Palette in HSL
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-2">
+    <div class="rounded-lg px-4 py-3 text-sm font-medium" style="background: hsl(145, 60%, 95%); color: hsl(145, 60%, 30%)">
+      ✓ Success — light background, dark text
+    </div>
+    <div class="rounded-lg px-4 py-3 text-sm font-medium" style="background: hsl(40, 90%, 95%); color: hsl(40, 90%, 30%)">
+      ⚠ Warning — light background, dark text
+    </div>
+    <div class="rounded-lg px-4 py-3 text-sm font-medium" style="background: hsl(0, 80%, 96%); color: hsl(0, 80%, 35%)">
+      ✕ Error — light background, dark text
+    </div>
+  </div>
+</Preview>
+
+## The Pattern
+
+For any color you're using:
+
+```
+hsl(H, S%, 95%)  → tint background
+hsl(H, S%, 65%)  → default button
+hsl(H, S%, 55%)  → hover state
+hsl(H, S%, 45%)  → active/pressed state
+hsl(H, 20%, 90%) → disabled state
+```
+
+All you need is the hue and saturation from your primary color, then adjust lightness.
+
+## Quick Recap (Yeah, I'm Out Of Names)
+
+- HSL describes colors in human terms: hue, saturation, lightness.
+- Adjust lightness for hover and active states. Lower L = darker.
+- Adjust saturation for disabled states. Lower S = duller.
+- Colors that should feel related share the same hue.
+- Thinking in HSL makes color decisions faster and more consistent than hex.

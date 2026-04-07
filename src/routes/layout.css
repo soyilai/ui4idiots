@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@layer base {
+	:root {
+		--background: var(--color-slate-200);
+		--foreground: var(--color-slate-800);
+
+		--blueprint-bg: var(--color-slate-950);
+		--blueprint-fg: oklch(from var(--color-slate-500) l c h / 0.13);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--background: var(--color-slate-900);
+			--foreground: var(--color-slate-100);
+		}
+	}
+
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+	}
+}
+
+@theme inline {
+	--color-primary: var(--color-blue-400);
+	--color-primary-hover: var(--color-blue-300);
+	--color-muted: var(--color-slate-400);
+	--color-muted-hover: var(--color-slate-500);
+}
+
+@theme {
+	--font-sans: 'Rethink Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	--font-serif: 'Old Standard TT', serif;
+}
+
+@layer components {
+	.blueprint {
+		background-size: 20px 20px;
+		background-color: var(--blueprint-bg);
+		color: #ffff;
+
+		background-image:
+			linear-gradient(var(--blueprint-fg) 2.4000000000000004px, transparent 2.4000000000000004px),
+			linear-gradient(
+				90deg,
+				var(--blueprint-fg) 2.4000000000000004px,
+				transparent 2.4000000000000004px
+			),
+			linear-gradient(var(--blueprint-fg) 1.2000000000000002px, transparent 1.2000000000000002px),
+			linear-gradient(
+				90deg,
+				var(--blueprint-fg) 1.2000000000000002px,
+				var(--blueprint-bg) 1.2000000000000002px
+			);
+
+		background-size:
+			60px 60px,
+			60px 60px,
+			12px 12px,
+			12px 12px;
+		background-position:
+			-2.4000000000000004px -2.4000000000000004px,
+			-2.4000000000000004px -2.4000000000000004px,
+			-1.2000000000000002px -1.2000000000000002px,
+			-1.2000000000000002px -1.2000000000000002px;
+	}
+
+	.underline-blue {
+		text-decoration: underline;
+		text-decoration-style: dashed;
+		text-decoration-color: var(--color-primary);
+	}
+
+	.underline-red {
+		text-decoration: underline;
+		text-decoration-style: wavy;
+		text-decoration-color: var(--color-red-500);
+		text-decoration-thickness: 0.2px;
+	}
+
+	iconify-icon {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+	}
+
+	a {
+		@apply transition-colors;
+	}
+}

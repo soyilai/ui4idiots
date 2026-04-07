@@ -1,0 +1,195 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Walk into a restaurant. The specials board yells at you. Walk into a store. The sale sign practically tackles you. Good UI does the same: it grabs your attention and shouts, “LOOK HERE FIRST!” That’s hierarchy.
+
+## Hierarchy: Not Just for Royalty
+
+Every screen gets read in some order. Hierarchy is how you control that order. You decide what gets seen first, second, and "oh, you're still here?"
+
+The goal isn't to make everything visible. It's to make the _right_ things visible.
+
+## The Three Tiers of UI Fame
+
+- **Primary:** The star of your screen. One per page, please.
+- **Secondary:** The backup dancers. Still important, but not stealing the spotlight.
+- **Tertiary:** The roadies. Metadata, links, legal text, and "P.S." stuff.
+
+If you have three primaries, you have zero primaries. (Math checks out.)
+
+**The Squint Test:** Squint until your screen blurs (or just take off your glasses). What stands out? That's your primary. If everything pops, you've got a problem.
+
+## Hierarchy in the Wild (A UI Safari)
+
+Here's a screen where everything is the same size and weight. The user has to read _everything_ to figure out what matters. (They won't.)
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg space-y-2">
+    <p class="text-sm font-medium text-gray-700">Welcome back, Jordan</p>
+    <p class="text-sm font-medium text-gray-700">Your plan: Pro</p>
+    <p class="text-sm font-medium text-gray-700">Storage used: 4.2 GB of 10 GB</p>
+    <p class="text-sm font-medium text-gray-700">Last login: 2 days ago</p>
+    <button class="text-sm font-medium text-gray-700 border border-gray-400 px-3 py-1 rounded w-full">Upgrade plan</button>
+    <button class="text-sm font-medium text-gray-700 border border-gray-400 px-3 py-1 rounded w-full">Manage storage</button>
+    <p class="text-xs text-gray-400">Nothing stands out. User has to work to find importance. (Also, labels everywhere! Well roast those in a minute.)</p>
+  </div>
+</Preview>
+
+Now, same info, but with clear tiers. The primary action is unmistakable. Secondary info is chill. Tertiary stuff is there if you care.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg shadow-sm space-y-4">
+    <div>
+      <h2 class="text-2xl font-bold text-gray-900">4.2 GB used</h2>
+      <p class="text-sm text-gray-500 mt-0.5">of 10 GB — 58% remaining</p>
+    </div>
+    <div class="bg-gray-100 rounded-full h-2 w-full overflow-hidden">
+      <div class="bg-blue-500 h-full rounded-full" style="width: 42%"></div>
+    </div>
+    <button class="bg-blue-600 text-white font-semibold text-sm px-4 py-2.5 rounded-md w-full">
+      Upgrade for more storage
+    </button>
+    <div class="flex justify-between text-xs text-gray-400">
+      <span>Pro plan</span>
+      <span>Last login 2 days ago</span>
+    </div>
+  </div>
+</Preview>
+
+The storage number is the story, big and bold. The context is secondary. The progress bar is a visual cue. The CTA gets the spotlight. The plan and login date are there, but quiet.
+
+### Emphasize by De-Emphasizing (The Music Producer’s Secret)
+
+Fun fact: I dabble in music production. (Yes, I'm that cool.) Sometimes, making something stand out isn't about cranking the volume, it's about turning everything else down. Same with UI. Let’s see:
+
+<Preview> 
+  <div class="flex gap-4 m-4">
+    <div class="p-4 border rounded-lg">
+      <h3 class="font-bold text-lg">Basic</h3> 
+      <p class="text-2xl font-bold">$9</p> 
+    </div> 
+    <div class="p-4 border rounded-lg">
+      <h3 class="font-bold text-lg">Pro</h3> 
+      <p class="text-2xl font-bold">$19</p>
+    </div> 
+    <div class="p-4 border rounded-lg"> 
+      <h3 class="font-bold text-lg">Enterprise</h3> 
+      <p class="text-2xl font-bold">$49</p>
+    </div>
+  </div> 
+</Preview>
+
+Now, let's tone down the non-primary steps:
+
+<Preview>
+  <div class="flex gap-4 m-4">
+      <div class="p-4 border rounded-lg opacity-60">
+      <h3 class="font-medium text-lg text-neutral-600">Basic</h3>
+      <p class="text-2xl font-medium text-neutral-600">$9</p>
+    </div> 
+    <div class="p-6 border-2 border-pink-500 rounded-xl shadow-lg">
+      <h3 class="font-bold text-lg text-pink-500">Pro</h3>
+      <p class="text-3xl font-bold">$19</p>
+    </div>
+    <div class="p-4 border rounded-lg opacity-60">
+      <h3 class="font-medium text-lg text-neutral-600">Enterprise</h3>
+      <p class="text-2xl font-medium text-neutral-600">$49</p>
+    </div>
+  </div>
+</Preview>
+
+## Not Everything Needs a Label (The Apple Store Fallacy)
+
+It's tempting to label everything, like a grocery store. But sometimes, labels just get in the way.
+
+<Preview>
+  <div class="shadow-lg flex flex-col items-center rounded-md p-12 mx-auto w-fit">
+    <img src="https://www.publicdomainpictures.net/pictures/70000/velka/red-apple-white-background.jpg" class="w-32 h-24" />
+    <div>
+      <p><span class="font-bold">Name:</span> Apples</p>
+      <p><span class="font-bold">Price:</span> $13 USD / kg</p>
+      <p><span class="font-bold">Provider:</span> The House of Apple Trees</p>
+      <button class="mt-4 px-3 py-1 bg-red-400 rounded">Add to Cart</button>
+    </div>
+  </div>
+</Preview>
+
+What if we just didn't?
+
+<Preview>
+  <div class="shadow-lg flex flex-col items-center rounded-md p-12 mx-auto w-fit">
+    <img src="https://www.publicdomainpictures.net/pictures/70000/velka/red-apple-white-background.jpg" class="w-32 h-24" />
+    <div>
+      <p class="text-center font-black text-xl">Apples</p>
+      <p class="font-medium">$13 USD / kg</p>
+      <p class="text-neutral-500 text-sm">From The House of Apple Trees</p>
+      <button class="mt-4 px-3 py-1 bg-red-400 rounded">Add to Cart</button>
+    </div>
+  </div>
+</Preview>
+
+Icons work too. (Just don't overdo it.)
+
+### Labels as Support
+
+Sometimes, labels are helpful for hierarchy. Like when you want to show off your monthly sales:
+
+<Preview>
+  <div class="shadow-lg bg-neutral-800 flex flex-col text-neutral-200 rounded-md mx-auto w-fit">
+    <div class="flex gap-4 items-center py-4 px-12">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m21.4 14.25l-7.15 7.15q-.3.3-.675.45t-.75.15t-.75-.15t-.675-.45l-8.825-8.825q-.275-.275-.425-.637T2 11.175V4q0-.825.588-1.412T4 2h7.175q.4 0 .775.163t.65.437l8.8 8.825q.3.3.438.675t.137.75t-.137.738t-.438.662M6.5 8q.625 0 1.063-.437T8 6.5t-.437-1.062T6.5 5t-1.062.438T5 6.5t.438 1.063T6.5 8"/></svg>
+      <div>
+        <p class="font-bold">
+          Monthly sales
+        </p>
+        <p class="mt-0 h-fit">
+          123 sales
+        </p>
+      </div>
+    </div>
+    <img src="/21-svgchart.png" class="h-24" alt="a chart" />
+  </div>
+</Preview>
+
+Or, make the label subtle and the number LOUD:
+
+<Preview>
+  <div class="shadow-lg bg-neutral-800 flex flex-col text-neutral-200 rounded-md mx-auto w-fit">
+    <div class="flex gap-4 items-center py-4 px-12">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m21.4 14.25l-7.15 7.15q-.3.3-.675.45t-.75.15t-.75-.15t-.675-.45l-8.825-8.825q-.275-.275-.425-.637T2 11.175V4q0-.825.588-1.412T4 2h7.175q.4 0 .775.163t.65.437l8.8 8.825q.3.3.438.675t.137.75t-.137.738t-.438.662M6.5 8q.625 0 1.063-.437T8 6.5t-.437-1.062T6.5 5t-1.062.438T5 6.5t.438 1.063T6.5 8"/></svg>
+      <div>
+        <p class="font-medium uppercase text-xs tracking-tight text-neutral-500">
+          Monthly sales
+        </p>
+        <p class="mt-0 h-fit">
+          <span class="font-black text-2xl">123</span> sales
+        </p>
+      </div>
+    </div>
+    <img src="/21-svgchart.png" class="h-24" alt="a chart" />
+  </div>
+</Preview>
+
+### When to Shout the Label
+
+Sometimes, users are _looking_ for a label, like in product descriptions. In those cases, make the label pop, but don’t let the data fade into the background. A little color goes a long way.
+
+## Document Semantics ≠ Visual Hierarchy
+
+Just because `<h1>` is big and bold in docs doesn’t mean it should be in your app. Sometimes, smaller headers are the real MVPs.
+
+### Semantics Are Cool, But Hierarchy Is Cooler
+
+Bootstrap loves "destructive," "success," "warning," and "info" colors. That’s fine, but don’t let semantics override hierarchy. Ask: is this action primary, secondary, or "meh"?
+
+- **Primary actions:** Obvious. Bold. High contrast.
+- **Secondary:** Clear, but restrained. Outlined or muted.
+- **Tertiary:** Discoverable, but calm. Links work well.
+
+## Quick Recap
+
+- Hierarchy controls reading order.
+- Three tiers: primary, secondary, tertiary.
+- Use size, weight, and contrast, not just one lever.
+- The squint test never lies.

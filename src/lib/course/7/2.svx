@@ -1,0 +1,85 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Text on images is common. And commonly done poorly. Images are busy. Text needs clear background. These two requirements fight like cats and dogs. Here’s how to make them play nice.
+
+## Five Techniques
+
+### 1. Overlay (Scrim)
+Add a semi-transparent dark gradient between image and text. The image shows through but at reduced contrast so text wins.
+
+Best for: hero sections, cards with images.
+
+### 2. Text in a Box
+Solid or semi-transparent background behind text only, not over the whole image.
+
+Best for: captions, labels, titles in one area.
+
+### 3. Image Darkening
+Reduce overall brightness so white text always passes contrast.
+
+Best for: full-screen backgrounds.
+
+### 4. Strategic Positioning
+Place text in the intentional blank area: sky, wall, plain background.
+
+Best for: editorial layouts with curated images.
+
+### 5. Text Shadow
+Add thick shadow to white text so it reads against any background.
+
+Best for: small use only (captions). Not for headlines.
+
+## Things to Verify
+
+- Always check contrast on the darkest version of the image.
+- A gradient scrim should be dark enough that white text passes 4.5:1.
+- Never use pure white text on light images without an overlay.
+- Text-shadow is a band-aid. Prefer scrim or darkening.
+- With animated or changing backgrounds, use even more overlay.
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-4">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Three techniques</p>
+    <div class="relative rounded-lg overflow-hidden h-28" style="background: linear-gradient(135deg, #6b8ab5, #4c6a9b, #3a5280)">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-3 left-3">
+        <p class="text-white text-sm font-semibold">Gradient scrim</p>
+        <p class="text-white/80 text-xs">Text at the bottom, overlay above</p>
+      </div>
+    </div>
+    <div class="relative rounded-lg overflow-hidden h-28" style="background: linear-gradient(135deg, #7da87b, #5e8f5e, #4a7549)">
+      <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm rounded px-2 py-1">
+        <p class="text-white text-sm font-semibold">Text in a box</p>
+      </div>
+    </div>
+    <div class="relative rounded-lg overflow-hidden h-28 flex items-center justify-center" style="background: linear-gradient(135deg, #c4a882, #a88e6b, #8f7654); filter: brightness(0.5)">
+      <div class="absolute inset-0 flex items-center justify-center" style="filter: brightness(2)">
+        <p class="text-white text-sm font-bold">Darkened image</p>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+Each technique creates a reliable contrast layer. The scrim approach is most versatile and natural-looking.
+
+## The Most Useful Pattern
+
+```html
+<div class="relative overflow-hidden rounded-lg">
+  <img src="..." />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+  <div class="absolute bottom-4 left-4 right-4">
+    <h3 class="text-white font-bold text-lg">Readable headline</h3>
+    <p class="text-white/80 text-sm mt-1">Supporting text that's still visible</p>
+  </div>
+</div>
+```
+
+## Quick Recap
+
+- Text over images is a readability challenge first.
+- Five techniques: scrim, text box, darkening, positioning, shadow.
+- Gradient scrim is most versatile.
+- Always verify contrast against the darkest image version.

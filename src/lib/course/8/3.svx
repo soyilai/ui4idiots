@@ -1,0 +1,53 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+The difference between a good UI and a polished one isn't the layout or colors. It's the small details that signal "someone cared about this." These micro-interactions take minutes to add and dramatically improve how people perceive your work.
+
+## The Details Checklist
+
+### 1. Hover States
+Interactive elements should respond to hover before being clicked. Buttons, links, cards, list items; if you can click it, it should change slightly on hover.
+
+### 2. Focus Rings
+Keyboard navigation needs visible focus indicators. This matters for accessibility and usability.
+
+### 3. Transition Timing
+No instant jumps. Smooth state changes. State transitions should animate, not snap.
+
+### 4. Loading States
+While data loads, show a skeleton. Skeletons are gray placeholder shapes that mimic the real layout coming.
+
+### 5. Disabled States
+Disabled elements should look disabled. Lower opacity or desaturated color. Never identical to active elements.
+
+### 6. Active/Press States
+Pressed buttons should feel pressed. Subtle scale or shadow change simulates physical depression.
+
+### 7. Micro-copy
+The small text near important actions: below a Delete button, below a form input. It answers the last question before users commit.
+
+### 8. Consistent Border Radius
+Pick one radius and stick to it. Or use a small deliberate set: sharp for inputs, rounded for cards, pill for badges.
+
+<Preview>
+  <div class="p-6 bg-gray-50 font-sans max-w-sm border border-gray-200 rounded-xl space-y-4">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Polish examples</p>
+    <button class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-sm font-medium px-4 py-2.5 rounded-lg shadow-sm hover:shadow transition-all duration-150">
+      Primary action
+    </button>
+    <button class="w-full bg-gray-300 text-gray-400 text-sm font-medium px-4 py-2.5 rounded-lg opacity-60 cursor-not-allowed" disabled>
+      Disabled action
+    </button>
+    <div class="w-full h-8 bg-gray-200 rounded animate-pulse"></div>
+  </div>
+</Preview>
+
+Every interactive element has visible states. Disabled is clearly different. Skeleton shows loading structure. All the details work together.
+
+## Quick Recap
+
+- The last 10% of effort creates the biggest perception shift.
+- Hover, focus, active, disabled, loading states on everything.
+- Micro-copy answers questions before they're asked.
+- Consistent border radius signals intentionality.

@@ -1,0 +1,65 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+On a flat, 2D screen, elevation is all smoke and mirrors. But your brain reads it as real. A dropdown that appears on top of a button feels “above” the button. A modal that dims the background is clearly the highest thing on the page. Elevation is the layer order of your UI, and managing it deliberately prevents chaos (and accidental UI avalanches).
+
+## The Layer Cake
+
+Think of your UI as a table with layers stacked on top:
+
+```
+Layer 0 — Page background
+Layer 1 — Cards, panels
+Layer 2 — Sticky headers, floating controls
+Layer 3 — Dropdowns, popovers, tooltips
+Layer 4 — Dialogs, modals
+Layer 5 — Notifications, toasts
+```
+
+Each layer should look visually different from the one below. Tools: shadows, backgrounds, backdrops.
+
+## What Elevation Communicates
+
+- **High elevation:** Temporary, demanding attention now (modals, notifications)
+- **Low elevation:** Persistent, background, contextual (sidebars, cards)
+
+A modal is high elevation because it needs immediate attention. A sidebar is low because it's always there. A tooltip is (somehow) even higher than the modal it describes.
+
+## The Stack in Practice
+
+<Preview>
+  <div class="relative bg-gray-50 rounded-xl overflow-hidden font-sans" style="height: 280px;">
+    <div class="absolute inset-0 p-4 space-y-2">
+      <div class="h-6 bg-gray-200 rounded w-3/4"></div>
+      <div class="h-4 bg-gray-100 rounded w-1/2"></div>
+    </div>
+    <div class="absolute top-6 left-6 bg-white rounded-lg p-4 shadow w-48">
+      <p class="text-xs font-medium text-gray-700">Card — Elevation 1</p>
+      <p class="text-xs text-gray-400 mt-1">soft shadow</p>
+    </div>
+    <div class="absolute top-12 left-24 bg-white rounded-lg p-3 shadow-lg w-40 border border-gray-100">
+      <p class="text-xs font-medium text-gray-700">Dropdown — Elevation 3</p>
+      <p class="text-xs text-gray-400 mt-1">bigger shadow</p>
+    </div>
+    <div class="absolute inset-0 bg-gray-900/40 flex items-center justify-center">
+      <div class="bg-white rounded-xl p-5 shadow-2xl w-48 relative z-10">
+        <p class="text-xs font-bold text-gray-900">Modal — Elevation 4</p>
+        <p class="text-xs text-gray-500 mt-1">shadow + backdrop</p>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+Each layer is visually distinct: shadow size increases with elevation. The modal has both a stronger shadow AND a dimmed backdrop. The background content is clearly beneath everything. Don’t let your UI become a layer lasagna.
+
+## Quick Exercise
+
+List every interactive element that appears above others: dropdowns, modals, tooltips, popovers. Are they using larger shadows than the elements they float above? If not, increase their shadow level.
+
+## The UI Cake!
+
+- Elevation is your UI's layer order.
+- Higher elevation = more temporary, more interrupting, needs more visual separation.
+- Match shadow strength to elevation.
+- Modals need backdrops. Dropdowns need stronger shadows or borders. Background content needs lighter shadows.

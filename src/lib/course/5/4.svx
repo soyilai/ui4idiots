@@ -1,0 +1,90 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Salt makes food taste better. Too much ruins it. Color works the same way. Use it intentionally, not just to "make things pop."
+
+## Two Extremes (Both Wrong)
+
+1. **Too little color:** Everything gray. Functional but lifeless. No energy, no direction.
+2. **Too much color:** Every section a different background, every button a different color. Feels like a confetti explosion.
+
+The sweet spot is in between: *meaningful* color that earns its place.
+
+## When Color Actually Works
+
+- **Interactive elements:** Your primary color on buttons and links signals "click me."
+- **Status communication:** Green = good. Red = bad. Yellow = attention. These are universal.
+- **Brand moments:** A subtle splash of brand color reinforces identity without screaming.
+- **Grouping:** A light tinted background can group a section without being loud.
+
+## When Color is Just Noise
+
+- Coloring a heading to "make it interesting"
+- Different background colors for sections that mean the same thing
+- Colorful icons where gray would work just as well
+- Rainbow navigation with every item in a different color (please don't)
+
+Color used to decorate, not communicate, is just noise.
+
+## Before: Every Color in the Rainbow
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-sm border rounded-lg space-y-3">
+    <h2 class="text-xl font-bold text-purple-600">Dashboard Overview</h2>
+    <div class="grid grid-cols-2 gap-2">
+      <div class="bg-blue-100 rounded-lg p-3 text-center">
+        <p class="text-lg font-bold text-blue-700">142</p>
+        <p class="text-xs text-blue-500">Users</p>
+      </div>
+      <div class="bg-pink-100 rounded-lg p-3 text-center">
+        <p class="text-lg font-bold text-pink-700">38</p>
+        <p class="text-xs text-pink-500">Tasks</p>
+      </div>
+      <div class="bg-green-100 rounded-lg p-3 text-center">
+        <p class="text-lg font-bold text-green-700">$4,820</p>
+        <p class="text-xs text-green-500">Revenue</p>
+      </div>
+      <div class="bg-orange-100 rounded-lg p-3 text-center">
+        <p class="text-lg font-bold text-orange-700">7</p>
+        <p class="text-xs text-orange-500">Alerts</p>
+      </div>
+    </div>
+    <p class="text-xs text-gray-400">Four colors. None mean anything. All equally loud.</p>
+  </div>
+</Preview>
+
+## After: Gray + Semantic Color
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-4">
+    <h2 class="text-lg font-semibold text-gray-900">Dashboard</h2>
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-gray-50 rounded-lg p-3">
+        <p class="text-2xl font-bold text-gray-900">142</p>
+        <p class="text-xs text-gray-500 mt-0.5">Users</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-3">
+        <p class="text-2xl font-bold text-gray-900">38</p>
+        <p class="text-xs text-gray-500 mt-0.5">Tasks</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-3">
+        <p class="text-2xl font-bold text-gray-900">$4,820</p>
+        <p class="text-xs text-gray-500 mt-0.5">Revenue</p>
+      </div>
+      <div class="bg-red-50 rounded-lg p-3 border border-red-100">
+        <p class="text-2xl font-bold text-red-600">7</p>
+        <p class="text-xs text-red-500 mt-0.5">Alerts — attention needed</p>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+Gray for neutral info, red for the alerts. Suddenly, color actually means something.
+
+## It's Salt, Not Confetti
+
+- Color is a communication tool, not decoration.
+- Gray most things, save color for interaction and status.
+- Too much color dilutes the meaning of functional color.
+- Reserve saturated colors for interactive and semantic purposes.

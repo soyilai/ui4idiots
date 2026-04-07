@@ -1,0 +1,76 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Nothing dates a UI faster than a bad shadow. Too dark, too hard, too big, or the wrong color, and suddenly your interface looks like it’s been time-traveling since Windows XP. Done right, shadows add depth, hierarchy, and physicality without anyone noticing. (That’s the point!)
+
+## What Shadows Actually Show
+
+When light hits a floating object, it casts a shadow. The further the object is from the surface, the softer and more spread the shadow. The closer, the tighter.
+
+- **Small, tight shadow** = element is barely lifted
+- **Large, soft shadow** = element is floating high
+
+## The Three Mistakes
+
+1. **Too dark:** Using pure black makes the shadow look painted, not cast.
+2. **Solid black:** Real shadows pick up ambient color. Use a desaturated blue or purple instead.
+3. **No blur:** A sharp shadow looks like a sticker, not a floating element.
+
+## The Shadow Scale
+
+Like spacing, shadows work best as a small system:
+
+```
+shadow-sm   → barely lifted
+shadow      → standard card
+shadow-md   → raised
+shadow-lg   → floating
+shadow-xl   → very high floating
+```
+
+Use each level consistently. Don't mix small and large shadows on related elements.
+
+## Before: Hard, Painted Shadow
+
+<Preview>
+  <div class="p-6 bg-gray-100 font-sans">
+    <div class="bg-white p-5 max-w-sm rounded" style="box-shadow: 4px 6px 0 rgba(0,0,0,0.4)">
+      <h3 class="text-base font-bold text-gray-900">Stark shadow</h3>
+      <p class="text-sm text-gray-600 mt-1">Hard-edged and dark. Looks pasted, not floating.</p>
+    </div>
+  </div>
+</Preview>
+
+## After: Soft, Natural Shadow
+
+<Preview>
+  <div class="p-6 bg-gray-50 font-sans">
+    <div class="bg-white p-5 max-w-sm rounded-xl shadow-md">
+      <h3 class="text-base font-bold text-gray-900">Natural shadow</h3>
+      <p class="text-sm text-gray-600 mt-1 leading-relaxed">Soft and blurred. The card floats naturally above the background.</p>
+      <button class="mt-3 bg-gray-900 text-white text-sm font-medium px-4 py-2 rounded-lg shadow-sm">Action</button>
+    </div>
+  </div>
+</Preview>
+
+## Pro Technique: Layered Shadows
+
+Two shadows are better than one. A tight near-shadow plus a larger soft shadow creates depth:
+
+```css
+.card {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.07),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+```
+
+This is the secret behind premium-looking shadows.
+
+## Even Shadows Betray
+
+- Shadows mimic physics: close to surface = tight and small. Far from surface = large and soft.
+- Three mistakes: too dark, pure black, no blur.
+- Use a shadow scale, not random values.
+- Two-layer shadows look more natural than single-layer.

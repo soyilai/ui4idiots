@@ -1,0 +1,65 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+You can't see it, but your brain reads it. Alignment is the secret grid that makes a layout feel intentional or like it was built on a trampoline.
+
+There are two main approaches:
+
+**Edge alignment** — All left edges (or right, or top) line up in a straight line. It feels organized and scannable.
+
+**Center alignment** — Everything's centered on one axis. Great for special moments. Not great for whole interfaces.
+
+Most layouts use edge alignment. Center alignment is the party trick you use sparingly.
+
+## The Line Count Test
+
+Imagine vertical lines through your layout. How many do you need to cover all the text and elements? Two or three? Good. More than five? You've got a problem. Fewer unique lines mean more harmony.
+
+## Before: Scattered
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border rounded-lg space-y-2">
+    <h2 class="text-xl font-bold text-gray-900">Your Dashboard</h2>
+    <p class="text-sm text-gray-500 text-center">Here's what happened today</p>
+    <div class="bg-gray-50 rounded p-3">
+      <p class="text-2xl font-bold text-gray-900 text-center">42</p>
+      <p class="text-xs text-gray-400 ml-2">tasks completed</p>
+    </div>
+    <p class="text-sm text-blue-600 text-right cursor-pointer">See full report →</p>
+    <p class="text-xs text-gray-400 text-center">Three different alignments. Nothing shares a line.</p>
+  </div>
+</Preview>
+
+## After: One To Rule 'Em All
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-4">
+    <div>
+      <h2 class="text-xl font-bold text-gray-900">Your Dashboard</h2>
+      <p class="text-sm text-gray-500 mt-1">Here's what happened today</p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-4">
+      <p class="text-3xl font-bold text-gray-900">42</p>
+      <p class="text-sm text-gray-500 mt-0.5">tasks completed</p>
+    </div>
+    <button class="text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+      See full report →
+    </button>
+  </div>
+</Preview>
+
+Everything shares the same left edge. Your eye glides down without zigzagging.
+
+## Quick Audit
+
+Open your design tool and draw vertical lines. If you have more than 2–3 unique left edges, you've got misaligned elements. Move them back in line.
+
+For content areas, use a container with consistent padding so the left edge comes for free.
+
+## Quick Recap (No Funny Title For This One)
+
+- Left alignment is the default. Center alignment is for special cases.
+- Fewer invisible lines mean more harmony.
+- Use containers and padding to keep everything aligned.
+- Test by drawing vertical lines through your layout.

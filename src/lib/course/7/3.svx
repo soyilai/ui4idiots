@@ -1,0 +1,55 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+You control every pixel of your interface. You can't control what users upload, type, or paste. User-generated content is the wildcard that breaks beautiful layouts. The only defense is designing defensively.
+
+## What Can Go Wrong Will Go Wrong (Murphy’s Law for UIs)
+
+- **Long unbroken strings:** URLs or usernames with no spaces that stretch cards infinitely
+- **Missing images:** A profile picture never uploaded, what shows instead?
+- **Extremely short content:** A name that's "Jo." A message that's one character.
+- **Extremely long content:** A bio that's 3000 words. A title that's 90 characters.
+- **Weird characters:** Emoji, right-to-left text, special characters, line breaks mid-word
+- **No content:** The user never filled in this field. What does empty look like?
+
+## Defensive Design Rules
+
+- **Clamp text.** Use truncation to limit visible lines. Add "read more" if needed.
+- **Set max-widths.** Containers should never grow infinitely.
+- **Force word breaks.** Prevent long strings from escaping boxes.
+- **Design fallbacks.** No image? Show initials in a colored circle. No title? Design for that.
+- **Cap your inputs.** If a username is 30 characters max, enforce it everywhere.
+
+## Defensive Layout
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-4">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">User cards — defended</p>
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-sm flex-shrink-0">AK</div>
+      <div class="min-w-0">
+        <p class="text-sm font-medium text-gray-900 truncate">Aleksandrina Kowalczyk-Bernstein</p>
+        <p class="text-xs text-gray-500">Product Designer</p>
+      </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-3">
+      <div class="flex gap-2">
+        <div class="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-xs flex-shrink-0">T</div>
+        <div class="min-w-0">
+          <p class="text-xs font-medium text-gray-800">Tom</p>
+          <p class="text-xs text-gray-600 break-all">Check this out: https://www.example.com/very/long/path/that/would/otherwise/break/the/layout/completely</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+Avatar has a fallback (initials). Long name is truncated. Long URL breaks naturally. Nothing breaks the layout.
+
+## Murphy's Law for UIs
+
+- Always design for the worst-case user content.
+- Use truncation, max-widths, and word-breaking.
+- Create fallback states for missing content.
+- Test with real user data, not perfect samples.

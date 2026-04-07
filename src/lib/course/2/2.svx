@@ -1,0 +1,109 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Welcome to the UI gym, where every element is either a heavyweight champ or a featherweight contender. (Spoiler: most are just bench-pressing pixels.)
+
+## Wait, Why Is My Button Yelling At Me?
+
+Ever seen a screen where everything is screaming for attention? It's like a toddler birthday party: everyone's loud, nobody's special, and you just want to go home. That’s what happens when you don’t control *weight*.
+
+But what is "weight"? It’s not just size. It’s:
+
+1. **Size** (Big = "LOOK AT ME!")
+2. **Color value** (Darker or more saturated = heavier. Neon pink? That’s a visual kettlebell.)
+3. **Font weight** (Bold is heavy. Thin is "I skipped leg day.")
+4. **Fill vs. stroke** (Solid shapes = sumo wrestler. Outlined = yoga instructor.)
+
+Mix these up and you can make a tiny thing feel huge, or a big thing feel like a whisper. Magic!
+
+## The "Everything Is Important" Disaster
+
+Let's meet a card where every element is the same weight. It’s the design equivalent of a monotone lecture.
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-sm border rounded-lg space-y-1">
+    <p class="text-sm text-gray-600">Product Name</p>
+    <p class="text-sm text-gray-600">$49.00</p>
+    <p class="text-sm text-gray-600">4.5 stars</p>
+    <p class="text-sm text-gray-600">128 reviews</p>
+    <p class="text-sm text-gray-600">In stock</p>
+    <p class="text-xs text-gray-400 mt-2">All elements the same. User doesn't know where to look.</p>
+  </div>
+</Preview>
+
+## Give Everything a Role
+
+<Preview>
+  <div class="p-5 bg-white font-sans max-w-sm border rounded-lg shadow-sm space-y-1">
+    <h3 class="text-lg font-bold text-gray-900">Ceramic Pour-Over Set</h3>
+    <div class="flex items-baseline gap-2">
+      <span class="text-2xl font-bold text-gray-900">$49</span>
+      <span class="text-sm text-gray-400 line-through">$65</span>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <span class="text-yellow-400 text-sm">★★★★★</span>
+      <span class="text-xs text-gray-400">128 reviews</span>
+    </div>
+    <span class="inline-block bg-green-50 text-green-700 text-xs font-medium px-2 py-0.5 rounded">In stock</span>
+  </div>
+</Preview>
+
+The price is the star. The reviews are supporting detail. The stock status is confirmation.
+
+## Don't Rely on Font Size Alone
+
+Relying only on font size to create hierarchy is like using ketchup as your only spice.
+
+Font size is one tool, not the only one. A tour card where the heading is bigger but everything else is regular weight still feels flat.
+
+<Preview>
+  <div class="shadow rounded flex">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Palacio_de_Gobierno_de_Xalapa_1.JPG/1280px-Palacio_de_Gobierno_de_Xalapa_1.JPG" alt="Xalapa Picture" class="w-64" />
+      <div class="w-full">
+        <div class="p-4">
+          <h1 class="text-3xl">Xalapa Tour</h1>
+          <p class="text-lg">Discover awesome places on Xalapa.</p>
+        </div>
+        <div class="p-4 bg-neutral-200 flex justify-between">
+          <div class="grow">
+            <p class="text-sm">Around 42+ reviews here from visitors.</p>
+            <p class="text-lg">$500 USD per person</p>
+          </div>
+          <button class="rounded bg-teal-500 text-white text-md w-fit grow">Visit</button>
+        </div>
+      </div>
+  </div>
+  <p class="text-xs">Image taken from Wikimedia</p>
+</Preview>
+
+But what if we let other weight tricks join the party?
+
+<Preview>
+  <div class="shadow rounded flex">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Palacio_de_Gobierno_de_Xalapa_1.JPG/1280px-Palacio_de_Gobierno_de_Xalapa_1.JPG" alt="Xalapa Picture" class="w-64" />
+      <div class="w-full">
+        <div class="p-4">
+          <h1 class="text-3xl font-black">Xalapa Tour</h1>
+          <p class="text-lg font-light">Discover awesome places on Xalapa.</p>
+        </div>
+        <div class="p-4 bg-neutral-200 flex justify-between">
+          <div class="grow">
+            <p class="text-sm font-light text-neutral-500">Around 42+ reviews here from visitors.</p>
+            <p class="text-md"><span class="font-bold text-lg">$500 USD</span> per person</p>
+          </div>
+          <button class="rounded bg-teal-500 text-white text-md w-fit grow">Visit</button>
+        </div>
+      </div>
+  </div>
+  <p class="text-xs text-neutral-600">Image taken from Wikimedia</p>
+</Preview>
+
+The price is bold now. The reviews are lighter. The headline is black. The button is ready. Font size did some work, but weight and color did the heavy lifting.
+
+## No Diet Required for Weight Loss
+
+- Weight is your volume control for attention.
+- Use size, color, font weight, and fill together.
+- If everything is heavy, nothing is. (Sorry, gymbros.)
+- Font size never works alone. You need the whole team.

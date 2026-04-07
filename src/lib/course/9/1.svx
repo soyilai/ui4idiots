@@ -1,0 +1,90 @@
+<script>
+    import Preview from "$lib/components/Preview.svelte"
+</script>
+
+Everything you've learned applies off-screen too. A poster, flyer, business card—these are just UI on paper. Hierarchy, spacing, typography, and color restraint all transfer directly. But print has its own quirks.
+
+## What Changes on Paper (Besides the Smell)
+
+- **Resolution is fixed but very high.** Screens are 72–144 PPI. Print is 300+ PPI. Your subtle 1px borders might disappear. Your fine details can finally shine.
+- **Color mode shifts.** Screens use RGB (light). Printers use CMYK (ink). Saturated screen colors look dull in print. Blues go purple. Neons go muddy.
+- **No interactivity.** No hover states. No scrolling. Everything must be visible at once, at one scale.
+- **Physical size matters.** A business card read at arm's length is different from a billboard read at 100 feet. The same type size means completely different things.
+
+## Applying Your UI Principles (The Greatest Hits)
+
+- **Hierarchy still rules.** A poster needs exactly one dominant element: the headline, the date or the image. Everything else is secondary. The “squint test” works here too.
+- **Whitespace is still power.** A poster with too much content looks cheap. Restraint signals quality. The Economist’s magazine covers are legendary precisely because they use so little.
+- **Alignment is even more visible on paper.** When you’re holding a flyer, misalignment is glaring. Use a grid. Align everything to it. No exceptions.
+- **Typography contrast matters more.** At print scale, text smaller than 8pt becomes illegible. Body text should be 10–12pt minimum. Hierarchy needs larger jumps, a headline at 14pt and body at 12pt is not enough contrast.
+
+## The Print Hierarchy Scale (For the Real World)
+
+```
+Billboard    → 10"+ headline size
+Poster A1    → 2–4" headline, 0.5" subline
+Flyer A5     → 36–48pt headline, 10–12pt body
+Business card → 11pt name, 8pt title
+```
+
+## Rules
+
+- Print hierarchy needs larger jumps than screen hierarchy.
+- Convert RGB to CMYK before printing. Test on your printer first.
+- Any element touching the page edge needs 0.125" (3mm) bleed area.
+- Use CMYK black for text: C:0 M:0 Y:0 K:100, not RGB(0,0,0).
+- Whitespace on printed pieces is expensive. Use it deliberately.
+
+<Preview>
+  <div class="p-6 bg-white font-sans max-w-sm border border-gray-100 rounded-xl shadow-sm space-y-6">
+    <div class="space-y-1">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Cluttered flyer</p>
+      <div class="border border-gray-200 rounded-lg p-4 space-y-1 bg-yellow-50">
+        <p class="text-xs text-gray-700 font-bold">ANNUAL COMMUNITY MEETUP</p>
+        <p class="text-xs text-gray-600">Join us for our annual community meetup event featuring talks, workshops, networking opportunities, food, drinks, and prizes for the best projects. This year we're hosting 15 speakers from 8 different countries with over 200 attendees expected.</p>
+        <p class="text-xs text-gray-600">WHEN: Saturday March 15th, 2025 at 10am</p>
+        <p class="text-xs text-gray-600">WHERE: Community Center, 123 Main Street</p>
+        <p class="text-xs text-gray-600">TICKETS: $25 / $15 students / FREE volunteers</p>
+        <p class="text-xs text-blue-600">www.communitymeetup.example.com/register/2025</p>
+      </div>
+    </div>
+    <div class="space-y-1">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Focused flyer</p>
+      <div class="border border-gray-200 rounded-lg bg-gray-900 p-5 space-y-4">
+        <p class="text-xs text-gray-400 tracking-widest uppercase">Community Meetup 2025</p>
+        <h3 class="text-2xl font-black text-white leading-tight">Come<br/>together.</h3>
+        <div class="space-y-1">
+          <p class="text-sm text-gray-300">March 15 · 10am → 8pm</p>
+          <p class="text-sm text-gray-300">Community Center, Main St</p>
+        </div>
+        <div class="pt-2 border-t border-gray-700">
+          <p class="text-xs text-gray-400">Tickets from $15 · communitymeetup.example</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+The cluttered version tries to say everything. The focused version makes one decision: the headline is the hook. Everything else supports it. The viewer knows instantly what this is.
+
+## Quick Exercise
+
+Find a physical flyer or poster (yours or someone else's). Squint at it. Can you still read the most important information blurred? If not, something's competing with the headline and needs to be removed or shrunk.
+
+## Simple Formula
+
+```
+ONE visual hook      → dominant headline or image
+TWO facts           → when + where
+ONE action          → register / call / visit
+minimal brand       → small logo or URL at bottom
+```
+
+Everything beyond this is clutter unless you have a reason.
+
+## Quick Recap
+
+- Print follows the same hierarchy and spacing rules as screen.
+- Different constraints: fixed size, no interactivity, RGB → CMYK, larger type needed.
+- More whitespace signals quality on paper.
+- One dominant element. Two facts. One action.
