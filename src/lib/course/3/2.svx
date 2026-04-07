@@ -6,7 +6,7 @@ Ever set padding to 13 pixels here, 17 there, 11 somewhere else? You've created 
 
 Instead of any number from 1–100, you pick from a short, sacred list: 4, 8, 12, 16, 24, 32, 48, 64.
 
-Every margin and padding comes from this list. No sneaky decimals. No "it felt right." Consistent spacing creates rhythm your eye can dance to. Arbitrary spacing? That’s a conga line with everyone out of step.
+Every margin and padding comes from this list. No sneaky decimals. No "it felt right." Consistent spacing creates rhythm your eye can dance to. Arbitrary spacing? That's a conga line with everyone out of step.
 
 The classic system uses multiples of 4:
 

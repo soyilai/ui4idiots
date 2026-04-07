@@ -2,18 +2,19 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-
-Every UI lives somewhere between “completely flat” (no shadows, no gradients, no depth) and “fully dimensional” (heavy shadows, gradients, textures). Both look great. The only real mistake? Getting stuck in the middle with no clear intention.
+Every UI lives somewhere between "completely flat" (no shadows, no gradients, no depth) and "fully dimensional" (heavy shadows, gradients, textures). Both look great. The only real mistake? Getting stuck in the middle with no clear intention.
 
 ## What Each Extreme Looks Like
 
 **Flat UI:**
+
 - Solid colors, no gradients
 - No shadows (or borders only)
 - High-contrast color blocks
 - Feels clean, modern, sometimes cold
 
 **Dimensional UI:**
+
 - Subtle gradients on surfaces
 - Layered shadows at different elevations
 - Borders that suggest material
@@ -24,12 +25,14 @@ Most production UIs sit in the middle, but they make a clear choice about which 
 ## How to Choose
 
 **Go flatter if:**
+
 - Content is your product (text, data, media)
 - You want technical or minimal vibes
 - You're building tools, dashboards, docs
 - You want a timeless look
 
 **Go more dimensional if:**
+
 - You want premium, physical, or warm feeling
 - Your product has emotional, consumer qualities
 - You're building landing pages or card-based apps
@@ -38,6 +41,7 @@ Most production UIs sit in the middle, but they make a clear choice about which 
 ## The Middle Path: Subtle Dimension
 
 You don't need to go full skeuomorphic. A few techniques create dimension without heaviness:
+
 - Small shadows on cards
 - Slightly lighter gradient on button tops
 - Thin borders that suggest material

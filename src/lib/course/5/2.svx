@@ -12,17 +12,18 @@ The problem? Hex is a robot language. HSL is for humans.
 - **S — Saturation:** How colorful? 0% = pure gray, 100% = full intensity.
 - **L — Lightness:** How much light? 0% = black, 100% = white, 50% = true color.
 
-So `hsl(220, 80%, 55%)` is: blue-ish, pretty saturated, medium lightness. You can *imagine* it before you see it. Magic!
+So `hsl(220, 80%, 55%)` is: blue-ish, pretty saturated, medium lightness. You can _imagine_ it before you see it. Magic!
 
-### HSL ≠ HSB (Don’t Get Fooled)
+### HSL ≠ HSB (Don't Get Fooled)
 
-Brightness in HSB is not the same as lightness in HSL. HSB’s 100% brightness is only white if saturation is 0%. In HSL, 100% lightness is always white. Just use HSL, browsers do.
+Brightness in HSB is not the same as lightness in HSL. HSB's 100% brightness is only white if saturation is 0%. In HSL, 100% lightness is always white. Just use HSL, browsers do.
 
 ## Why Designers Should Care
 
 With HSL, you can:
+
 - **Make a color lighter** by increasing L. Same hue, same saturation, just more light.
-- **Mute a color** by decreasing S. It goes from “party” to “library.”
+- **Mute a color** by decreasing S. It goes from "party" to "library."
 - **Create a hover state** by dropping L by 10. Always looks right.
 - **Build a tint background** with the same H and S, but L at 95%. Perfect for alert boxes.
 

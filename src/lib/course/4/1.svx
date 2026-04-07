@@ -2,7 +2,7 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-Most people think typography is about picking a font that screams “I have taste!” (Comic Sans, anyone?). But real typography is about making words so easy to read your users forget they’re even reading. A boring font that's comfy to read beats a fancy font that makes people squint.
+Most people think typography is about picking a font that screams "I have taste!" (Comic Sans, anyone?). But real typography is about making words so easy to read your users forget they're even reading. A boring font that's comfy to read beats a fancy font that makes people squint.
 
 ## The Readability Checklist
 

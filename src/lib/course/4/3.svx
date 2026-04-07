@@ -6,7 +6,7 @@ Ever read a paragraph so wide your eyes needed GPS to find the next line? Or so 
 
 When you finish a line, your eye jumps back to the start of the next. Too short and you're jumping constantly (exhausting). Too long and you lose your place and read the same line twice.
 
-The 45–75 character range is the “Goldilocks Zone” for reading. Not too long, not too short, just right.
+The 45–75 character range is the "Goldilocks Zone" for reading. Not too long, not too short, just right.
 
 ## How To Cheat
 

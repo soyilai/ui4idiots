@@ -2,11 +2,11 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-Ever feel like your UI is yelling at you, but you can’t tell what it’s saying? That’s noise. Not the fun kind with guitars, the kind that makes users’ brains go "nope!" and click away.
+Ever feel like your UI is yelling at you, but you can't tell what it's saying? That's noise. Not the fun kind with guitars, the kind that makes users' brains go "nope!" and click away.
 
 The urge to add another border, another icon, another shadow? That's your inner raccoon. Ignore it. Most of the time, the answer isn't "add more." It's "subtract until it feels bare, then add one thing back."
 
-## What’s Actually Making All That Racket?
+## What's Actually Making All That Racket?
 
 - Borders where space would do the job
 - Dividers between things that are already separate
@@ -60,7 +60,7 @@ The urge to add another border, another icon, another shadow? That's your inner 
   </div>
 </Preview>
 
-## The “Marie Kondo” Test for UI
+## The "Marie Kondo" Test for UI
 
 Ask yourself about each element:
 

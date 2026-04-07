@@ -2,7 +2,7 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-You’ve got a wide screen, a tall container, and a button that looks like it’s been on a crash diet. Instinct says: “Stretch it! Fill the space!”
+You've got a wide screen, a tall container, and a button that looks like it's been on a crash diet. Instinct says: "Stretch it! Fill the space!"
 
 When you see leftover space, your brain screams "fix it." But that space is breathing room. Forcing elements to fill every pixel is like stuffing a suitcase until it explodes. (Nobody wants UI socks flying everywhere.)
 

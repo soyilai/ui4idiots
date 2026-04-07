@@ -2,7 +2,7 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-Walk into a restaurant. The specials board yells at you. Walk into a store. The sale sign practically tackles you. Good UI does the same: it grabs your attention and shouts, “LOOK HERE FIRST!” That’s hierarchy.
+Walk into a restaurant. The specials board yells at you. Walk into a store. The sale sign practically tackles you. Good UI does the same: it grabs your attention and shouts, "LOOK HERE FIRST!" That's hierarchy.
 
 ## Hierarchy: Not Just for Royalty
 
@@ -59,9 +59,9 @@ Now, same info, but with clear tiers. The primary action is unmistakable. Second
 
 The storage number is the story, big and bold. The context is secondary. The progress bar is a visual cue. The CTA gets the spotlight. The plan and login date are there, but quiet.
 
-### Emphasize by De-Emphasizing (The Music Producer’s Secret)
+### Emphasize by De-Emphasizing (The Music Producer's Secret)
 
-Fun fact: I dabble in music production. (Yes, I'm that cool.) Sometimes, making something stand out isn't about cranking the volume, it's about turning everything else down. Same with UI. Let’s see:
+Fun fact: I dabble in music production. (Yes, I'm that cool.) Sometimes, making something stand out isn't about cranking the volume, it's about turning everything else down. Same with UI. Let's see:
 
 <Preview> 
   <div class="flex gap-4 m-4">
@@ -173,15 +173,15 @@ Or, make the label subtle and the number LOUD:
 
 ### When to Shout the Label
 
-Sometimes, users are _looking_ for a label, like in product descriptions. In those cases, make the label pop, but don’t let the data fade into the background. A little color goes a long way.
+Sometimes, users are _looking_ for a label, like in product descriptions. In those cases, make the label pop, but don't let the data fade into the background. A little color goes a long way.
 
 ## Document Semantics ≠ Visual Hierarchy
 
-Just because `<h1>` is big and bold in docs doesn’t mean it should be in your app. Sometimes, smaller headers are the real MVPs.
+Just because `<h1>` is big and bold in docs doesn't mean it should be in your app. Sometimes, smaller headers are the real MVPs.
 
 ### Semantics Are Cool, But Hierarchy Is Cooler
 
-Bootstrap loves "destructive," "success," "warning," and "info" colors. That’s fine, but don’t let semantics override hierarchy. Ask: is this action primary, secondary, or "meh"?
+Bootstrap loves "destructive," "success," "warning," and "info" colors. That's fine, but don't let semantics override hierarchy. Ask: is this action primary, secondary, or "meh"?
 
 - **Primary actions:** Obvious. Bold. High contrast.
 - **Secondary:** Clear, but restrained. Outlined or muted.

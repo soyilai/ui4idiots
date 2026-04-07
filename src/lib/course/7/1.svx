@@ -10,7 +10,7 @@ A bad image choice ruins an otherwise solid design. A great image makes a medioc
 
 1. **Unrelated stock photos:** A team of attractive people in a glass office who are definitely not your users, for a product they would never use.
 2. **Inconsistent style:** Three photos that were clearly shot by different photographers on different planets.
-3. **Wrong aspect ratio:** A compressed image stretched to fill a space it wasn’t designed for. Ouch.
+3. **Wrong aspect ratio:** A compressed image stretched to fill a space it wasn't designed for. Ouch.
 4. **Competing with content:** A busy, colorful image behind text that needs to be read.
 
 ## What Good Images Do

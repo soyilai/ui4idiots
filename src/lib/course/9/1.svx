@@ -13,9 +13,9 @@ Everything you've learned applies off-screen too. A poster, flyer, business card
 
 ## Applying Your UI Principles (The Greatest Hits)
 
-- **Hierarchy still rules.** A poster needs exactly one dominant element: the headline, the date or the image. Everything else is secondary. The “squint test” works here too.
-- **Whitespace is still power.** A poster with too much content looks cheap. Restraint signals quality. The Economist’s magazine covers are legendary precisely because they use so little.
-- **Alignment is even more visible on paper.** When you’re holding a flyer, misalignment is glaring. Use a grid. Align everything to it. No exceptions.
+- **Hierarchy still rules.** A poster needs exactly one dominant element: the headline, the date or the image. Everything else is secondary. The "squint test" works here too.
+- **Whitespace is still power.** A poster with too much content looks cheap. Restraint signals quality. The Economist's magazine covers are legendary precisely because they use so little.
+- **Alignment is even more visible on paper.** When you're holding a flyer, misalignment is glaring. Use a grid. Align everything to it. No exceptions.
 - **Typography contrast matters more.** At print scale, text smaller than 8pt becomes illegible. Body text should be 10–12pt minimum. Hierarchy needs larger jumps, a headline at 14pt and body at 12pt is not enough contrast.
 
 ## The Print Hierarchy Scale (For the Real World)

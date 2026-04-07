@@ -2,14 +2,13 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-
-Ever set your heading to 48px, your subheading to 36px, your card title to 30px, and your label to 18px, then wondered why everything feels “meh”? That's the problem with random sizes.
+Ever set your heading to 48px, your subheading to 36px, your card title to 30px, and your label to 18px, then wondered why everything feels "meh"? That's the problem with random sizes.
 
 If all your sizes are kinda big, nothing is really big. If everything is bold, nothing stands out. A type scale fixes this by using math instead of guessing.
 
-## The “Goldilocks” Problem
+## The "Goldilocks" Problem
 
-If all your font sizes are kinda big, nothing is *really* big. If everything is bold, nothing is bold. Enter: the type scale.
+If all your font sizes are kinda big, nothing is _really_ big. If everything is bold, nothing is bold. Enter: the type scale.
 
 ## What's a Type Scale, Anyway
 

@@ -2,7 +2,7 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-On a flat, 2D screen, elevation is all smoke and mirrors. But your brain reads it as real. A dropdown that appears on top of a button feels “above” the button. A modal that dims the background is clearly the highest thing on the page. Elevation is the layer order of your UI, and managing it deliberately prevents chaos (and accidental UI avalanches).
+On a flat, 2D screen, elevation is all smoke and mirrors. But your brain reads it as real. A dropdown that appears on top of a button feels "above" the button. A modal that dims the background is clearly the highest thing on the page. Elevation is the layer order of your UI, and managing it deliberately prevents chaos (and accidental UI avalanches).
 
 ## The Layer Cake
 
@@ -51,7 +51,7 @@ A modal is high elevation because it needs immediate attention. A sidebar is low
   </div>
 </Preview>
 
-Each layer is visually distinct: shadow size increases with elevation. The modal has both a stronger shadow AND a dimmed backdrop. The background content is clearly beneath everything. Don’t let your UI become a layer lasagna.
+Each layer is visually distinct: shadow size increases with elevation. The modal has both a stronger shadow AND a dimmed backdrop. The background content is clearly beneath everything. Don't let your UI become a layer lasagna.
 
 ## Quick Exercise
 

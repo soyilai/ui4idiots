@@ -6,12 +6,12 @@ Welcome to the UI gym, where every element is either a heavyweight champ or a fe
 
 ## Wait, Why Is My Button Yelling At Me?
 
-Ever seen a screen where everything is screaming for attention? It's like a toddler birthday party: everyone's loud, nobody's special, and you just want to go home. That’s what happens when you don’t control *weight*.
+Ever seen a screen where everything is screaming for attention? It's like a toddler birthday party: everyone's loud, nobody's special, and you just want to go home. That's what happens when you don't control _weight_.
 
-But what is "weight"? It’s not just size. It’s:
+But what is "weight"? It's not just size. It's:
 
 1. **Size** (Big = "LOOK AT ME!")
-2. **Color value** (Darker or more saturated = heavier. Neon pink? That’s a visual kettlebell.)
+2. **Color value** (Darker or more saturated = heavier. Neon pink? That's a visual kettlebell.)
 3. **Font weight** (Bold is heavy. Thin is "I skipped leg day.")
 4. **Fill vs. stroke** (Solid shapes = sumo wrestler. Outlined = yoga instructor.)
 
@@ -19,7 +19,7 @@ Mix these up and you can make a tiny thing feel huge, or a big thing feel like a
 
 ## The "Everything Is Important" Disaster
 
-Let's meet a card where every element is the same weight. It’s the design equivalent of a monotone lecture.
+Let's meet a card where every element is the same weight. It's the design equivalent of a monotone lecture.
 
 <Preview>
   <div class="p-5 bg-white font-sans max-w-sm border rounded-lg space-y-1">

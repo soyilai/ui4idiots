@@ -2,17 +2,17 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-The brain is always looking for patterns. It automatically groups things that are close together, and separates things that are far apart. If you ignore this, your layout will feel confusing even when the content is perfectly correct. (It’s not you, it’s the spacing.)
+The brain is always looking for patterns. It automatically groups things that are close together, and separates things that are far apart. If you ignore this, your layout will feel confusing even when the content is perfectly correct. (It's not you, it's the spacing.)
 
 ## Proximity Is Meaning
 
 This is called the Law of Proximity, but forget the fancy name. The practical rule is: **things that are close together look related**, like fries and ketchup.
 
-Put a label three pixels above a field and it looks related. Put it three pixels above the next field by accident, and now it looks like *that* label. This is how bad forms happen, and how good ones get ruined.
+Put a label three pixels above a field and it looks related. Put it three pixels above the next field by accident, and now it looks like _that_ label. This is how bad forms happen, and how good ones get ruined.
 
-## The Two Dimensions of Grouping 
+## The Two Dimensions of Grouping
 
-You group with **space** and you separate with **space**. More space between two things = less related. Less space = more related. (It’s that simple.)
+You group with **space** and you separate with **space**. More space between two things = less related. Less space = more related. (It's that simple.)
 
 You can also use containers (cards, boxes, backgrounds) to group, but reach for whitespace first. Containers add visual weight. Whitespace is free and calorie-free.
 
@@ -20,7 +20,7 @@ You can also use containers (cards, boxes, backgrounds) to group, but reach for 
 - Use consistent internal spacing within groups.
 - Use noticeably more space between groups than within them.
 - Labels belong to the element directly below or beside them, not equidistant between two elements.
-- Form fields are the most common grouping failure. Each label should clearly “own” its field.
+- Form fields are the most common grouping failure. Each label should clearly "own" its field.
 
 ## What Goes Wrong (A Cautionary Tale)
 

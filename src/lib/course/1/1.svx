@@ -3,54 +3,48 @@
     import Image from "$lib/components/Image.svelte"
 </script>
 
-You open Figma. 
+You open Figma.
 
+Or VS Code.
 
-Or VS Code. 
+Or Notepad, if you're feeling spicy.
 
+_The cursor blinks._
 
-Or Notepad, if you’re feeling spicy. 
+_You blink back._
 
+It's a staring contest, and _you're losing_.
 
-*The cursor blinks.*
-
-
-*You blink back.*
-
-
-It’s a staring contest, and *you’re losing*.
-
-
-Congratulations! You’ve just experienced the #1 killer of side projects: The Blank Screen Panic™. (It’s like stage fright, but for pixels.)
+Congratulations! You've just experienced the #1 killer of side projects: The Blank Screen Panic™. (It's like stage fright, but for pixels.)
 
 ## Wait, Why Am I Frozen? (Besides the Obvious Lack of Coffee)
 
-You’re trying to design, decide, and dazzle all at once. That’s like trying to cook dinner, set the table and wash the dishes simultaneously, only your wife can do that, and you’ll probably lose a finger (or your motivation).
+You're trying to design, decide, and dazzle all at once. That's like trying to cook dinner, set the table and wash the dishes simultaneously, only your wife can do that, and you'll probably lose a finger (or your motivation).
 
-Let’s not do that. Let’s do this instead:
+Let's not do that. Let's do this instead:
 
 ## The Three Dumb Questions That Make You a Genius
 
 Before you drag a single rectangle, ask yourself (or your rubber duck, or your cat):
 
-1. **What’s the ONE thing this screen must do?**
-   (If you say “everything,” you get a time-out.)
+1. **What's the ONE thing this screen must do?**
+   (If you say "everything," you get a time-out.)
 
-2. **Who’s looking at this, and what do they already know?**
+2. **Who's looking at this, and what do they already know?**
    (Designing for Grandma? Maybe skip the 8-bit hacker font.)
 
 3. **What happens next?**
-   (Every screen is a bus stop. Where’s the bus going?)
+   (Every screen is a bus stop. Where's the bus going?)
 
-Say them out loud. Whisper them. Write them on your hand. Tattoo them on your dog. Just don’t skip them.
+Say them out loud. Whisper them. Write them on your hand. Tattoo them on your dog. Just don't skip them.
 
 ## How to Fail at UI Design (A Tragic Play in One Act)
 
-You: “Let’s pick a color scheme!”
+You: "Let's pick a color scheme!"
 
-Also you: “Ooh, fonts!”
+Also you: "Ooh, fonts!"
 
-Still you: “I’ll just make a quick navbar…”
+Still you: "I'll just make a quick navbar…"
 
 One hour later: You have a Pinterest board, a headache, and exactly zero UI.
 
@@ -69,18 +63,18 @@ One hour later: You have a Pinterest board, a headache, and exactly zero UI.
   </div>
 </Preview>
 
-Moral of the story: Don’t sweat the small stuff (yet). Grab a fat marker and sketch your idea. If you can’t fit it with a Sharpie, you’re overthinking it. (Also, Sharpies smell nice. But don’t sniff them too long.)
+Moral of the story: Don't sweat the small stuff (yet). Grab a fat marker and sketch your idea. If you can't fit it with a Sharpie, you're overthinking it. (Also, Sharpies smell nice. But don't sniff them too long.)
 
 ## The Navbar Trap (And Other UI Booby Traps)
 
-Designing a navbar before you know what your app does is like building a garage for a car you haven’t bought. Maybe you don’t even need a navbar! Google didn’t. (And they seem to be doing okay.)
+Designing a navbar before you know what your app does is like building a garage for a car you haven't bought. Maybe you don't even need a navbar! Google didn't. (And they seem to be doing okay.)
 
 <Image src="/11-googlefrontpage.png" alt="Google Frontpage" epi="Google frontpage" />
 
 So then, what's the correct way? Here's an idea:
 
 You write the headline first. Then the supporting line. Then the call to action. Then you worry about color.
- 
+
 <Preview>
   <div class="p-8 bg-white font-sans space-y-4 max-w-sm border border-gray-200 rounded-lg shadow-sm">
     <h2 class="text-2xl font-bold text-gray-900">Save your reading list</h2>
@@ -92,15 +86,14 @@ You write the headline first. Then the supporting line. Then the call to action.
   </div>
 </Preview>
 
- 
 The second example was built in this exact order:
 
 1. Write the headline (answers: what does this do?)
 2. Write the subline (answers: why should I care? users don't care about you!1!11, surprising, right?)
 3. Write the button (answers: what do I do next?)
 4. Add the footnote (answer an objection)
- 
-No color, no font, no nothing yet! But it *looks* and *communicates* good.
+
+No color, no font, no nothing yet! But it _looks_ and _communicates_ good.
 
 ## Quick Recap
 

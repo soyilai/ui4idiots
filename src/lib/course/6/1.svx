@@ -2,7 +2,7 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-Nothing dates a UI faster than a bad shadow. Too dark, too hard, too big, or the wrong color, and suddenly your interface looks like it’s been time-traveling since Windows XP. Done right, shadows add depth, hierarchy, and physicality without anyone noticing. (That’s the point!)
+Nothing dates a UI faster than a bad shadow. Too dark, too hard, too big, or the wrong color, and suddenly your interface looks like it's been time-traveling since Windows XP. Done right, shadows add depth, hierarchy, and physicality without anyone noticing. (That's the point!)
 
 ## What Shadows Actually Show
 
@@ -60,9 +60,9 @@ Two shadows are better than one. A tight near-shadow plus a larger soft shadow c
 
 ```css
 .card {
-  box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.07),
-    0 4px 12px rgba(0, 0, 0, 0.06);
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.07),
+		0 4px 12px rgba(0, 0, 0, 0.06);
 }
 ```
 

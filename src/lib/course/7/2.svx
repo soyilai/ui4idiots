@@ -2,31 +2,36 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-Text on images is common. And commonly done poorly. Images are busy. Text needs clear background. These two requirements fight like cats and dogs. Here’s how to make them play nice.
+Text on images is common. And commonly done poorly. Images are busy. Text needs clear background. These two requirements fight like cats and dogs. Here's how to make them play nice.
 
 ## Five Techniques
 
 ### 1. Overlay (Scrim)
+
 Add a semi-transparent dark gradient between image and text. The image shows through but at reduced contrast so text wins.
 
 Best for: hero sections, cards with images.
 
 ### 2. Text in a Box
+
 Solid or semi-transparent background behind text only, not over the whole image.
 
 Best for: captions, labels, titles in one area.
 
 ### 3. Image Darkening
+
 Reduce overall brightness so white text always passes contrast.
 
 Best for: full-screen backgrounds.
 
 ### 4. Strategic Positioning
+
 Place text in the intentional blank area: sky, wall, plain background.
 
 Best for: editorial layouts with curated images.
 
 ### 5. Text Shadow
+
 Add thick shadow to white text so it reads against any background.
 
 Best for: small use only (captions). Not for headlines.
@@ -68,12 +73,12 @@ Each technique creates a reliable contrast layer. The scrim approach is most ver
 
 ```html
 <div class="relative overflow-hidden rounded-lg">
-  <img src="..." />
-  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-  <div class="absolute bottom-4 left-4 right-4">
-    <h3 class="text-white font-bold text-lg">Readable headline</h3>
-    <p class="text-white/80 text-sm mt-1">Supporting text that's still visible</p>
-  </div>
+	<img src="..." />
+	<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+	<div class="absolute right-4 bottom-4 left-4">
+		<h3 class="text-lg font-bold text-white">Readable headline</h3>
+		<p class="mt-1 text-sm text-white/80">Supporting text that's still visible</p>
+	</div>
 </div>
 ```
 

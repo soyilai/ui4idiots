@@ -4,7 +4,7 @@
 
 # Billboards & Signs: Design for the Blink of an Eye
 
-A billboard has about 3 seconds of attention from a driver going 60 mph. A sign at the end of a hallway is read from 20 meters away. These aren’t just “bigger UI”, they follow completely different rules about what information even belongs, and how it should be sized. Let’s make your message readable at warp speed.
+A billboard has about 3 seconds of attention from a driver going 60 mph. A sign at the end of a hallway is read from 20 meters away. These aren't just "bigger UI", they follow completely different rules about what information even belongs, and how it should be sized. Let's make your message readable at warp speed.
 
 ## The Distance Rule
 
@@ -13,6 +13,7 @@ Here's the fundamental constraint: type legibility depends on size.
 Rough guide: **1 inch of letter height ≈ 100 feet of readable distance** (in good conditions).
 
 This means:
+
 - A 4" headline reads from ~400 feet
 - A 0.5" body text on the same sign is invisible beyond 50 feet
 - A 1-inch pixel at 10 feet is fine. At 200 feet it blurs.
@@ -27,7 +28,7 @@ This means:
 ## Scale by Distance
 
 | Distance    | Min Type Height | Weight          |
-|-------------|-----------------|-----------------|
+| ----------- | --------------- | --------------- |
 | 3m (indoor) | 48pt            | Bold            |
 | 10m         | 150pt           | Extrabold       |
 | 50m         | 300pt           | Black/Condensed |

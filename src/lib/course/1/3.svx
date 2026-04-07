@@ -4,38 +4,38 @@
 
 ## Why Does This App Feel Like a Robot? (Or: The Secret Sauce of Personality)
 
-Two apps. Same features. Same info. Same layout. But one feels like a party, the other like a tax form. What gives? It’s personality!
+Two apps. Same features. Same info. Same layout. But one feels like a party, the other like a tax form. What gives? It's personality!
 
 ## Personality: Not Just for Dating Profiles
 
-Personality isn’t about slapping a rainbow gradient on a button or picking a font that looks like it escaped from a circus. It’s the vibe, the attitude, the “should I trust this app with my credit card?” feeling.
+Personality isn't about slapping a rainbow gradient on a button or picking a font that looks like it escaped from a circus. It's the vibe, the attitude, the "should I trust this app with my credit card?" feeling.
 
-Fun fact: Our brains freak out when faces look weird. (Science! Or maybe just me after too much coffee.) Same with design. If your hospital app feels like a clown party, or your kids’ app feels like a bank, users get confused. And possibly alarmed.
+Fun fact: Our brains freak out when faces look weird. (Science! Or maybe just me after too much coffee.) Same with design. If your hospital app feels like a clown party, or your kids' app feels like a bank, users get confused. And possibly alarmed.
 
-It’s not about being “fun” or “serious”, it’s about being **right** for the job.
+It's not about being "fun" or "serious", it's about being **right** for the job.
 
 ## The Four Personality Levers (Pull Responsibly)
 
-Every UI’s personality is tuned by four magical levers:
+Every UI's personality is tuned by four magical levers:
 
-1. **Shape**: Rounded corners = friendly. Sharp corners = “I mean business.”
-2. **Color temperature**: Warm = approachable. Cool = “I’m a robot, beep boop.”
-3. **Typeface mood**: Rounded sans-serif = chill. Geometric sans = modern. Serif = “I went to design college.”
-4. **Density**: Lots of whitespace = spa day. Tight spacing = “Let’s get stuff done!”
+1. **Shape**: Rounded corners = friendly. Sharp corners = "I mean business."
+2. **Color temperature**: Warm = approachable. Cool = "I'm a robot, beep boop."
+3. **Typeface mood**: Rounded sans-serif = chill. Geometric sans = modern. Serif = "I went to design college."
+4. **Density**: Lots of whitespace = spa day. Tight spacing = "Let's get stuff done!"
 
-You don’t have to crank every lever to 11. Just keep them pointing the same way. Consistency is the real secret sauce.
+You don't have to crank every lever to 11. Just keep them pointing the same way. Consistency is the real secret sauce.
 
-## Let’s Get Messy (With Paint, Not Regret)
+## Let's Get Messy (With Paint, Not Regret)
 
-- Pick 2–3 personality adjectives before you start. “Calm, reliable, minimal.” Or “Energetic, approachable, bold.”
-- Make sure all four levers agree. (No “serious” fonts with “party” colors, please.)
-- Inconsistency is the enemy. A soft palette with an aggressive typeface? That’s a design identity crisis.
+- Pick 2–3 personality adjectives before you start. "Calm, reliable, minimal." Or "Energetic, approachable, bold."
+- Make sure all four levers agree. (No "serious" fonts with "party" colors, please.)
+- Inconsistency is the enemy. A soft palette with an aggressive typeface? That's a design identity crisis.
 - Let personality shine in the little stuff, not just the hero section.
-- When in doubt, pick one adjective and go all-in. “Timid” personality = no personality.
+- When in doubt, pick one adjective and go all-in. "Timid" personality = no personality.
 
 ## The App That Tried to Be Everything (And Failed)
 
-A productivity app with a casual font, corporate blue, playful cards, AND dense, info-heavy tables. It’s like a mullet: business in the front, party in the back, and nobody’s happy.
+A productivity app with a casual font, corporate blue, playful cards, AND dense, info-heavy tables. It's like a mullet: business in the front, party in the back, and nobody's happy.
 
 <Preview>
   <div class="p-5 bg-white font-sans max-w-sm border rounded-lg space-y-3">
@@ -45,13 +45,13 @@ A productivity app with a casual font, corporate blue, playful cards, AND dense,
       <div class="bg-pink-200 rounded-2xl p-2 text-center">✨ Yay!</div>
       <div class="border-2 border-dashed border-yellow-400 p-2 text-center rounded">???</div>
     </div>
-    <p class="text-xs text-gray-400">Everything has a different personality. Nothing feels intentional. (It’s a design identity crisis!)</p>
+    <p class="text-xs text-gray-400">Everything has a different personality. Nothing feels intentional. (It's a design identity crisis!)</p>
   </div>
 </Preview>
 
 ## The Makeover: Calm, Focused, Minimal
 
-Now, the same app, but every lever points the same direction. It’s like a day at the spa for your eyeballs.
+Now, the same app, but every lever points the same direction. It's like a day at the spa for your eyeballs.
 
 <Preview>
   <div class="p-5 bg-gray-50 font-sans max-w-sm border border-gray-200 rounded-xl space-y-4">
@@ -76,13 +76,12 @@ Now, the same app, but every lever points the same direction. It’s like a day 
  
 From shape to spacing, all four levers say "calm and focused".
 
- 
 ## Quick Exercise
- 
+
 Choose a project you're working on. Write three adjectives for its personality. Then look at your current UI: does each element express those adjectives? Find the one most inconsistent element and fix it.
- 
+
 Before building any UI, fill this out:
- 
+
 ```
 Product: ___________
 Adjectives: _____, _____, _____
@@ -91,11 +90,11 @@ Color temp: warm / cool / neutral
 Typeface mood: casual / neutral / authoritative
 Density: airy / moderate / dense
 ```
- 
+
 Pin this somewhere visible while you design.
- 
+
 ## Quick Recap (Because We'll Forget)
- 
+
 - Personality is a set of consistent signals, not decoration.
 - Four levers: shape, color temperature, typeface mood, density.
 - Pick adjectives first, then tune levers to match.

@@ -2,7 +2,6 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-
 Most developers open a color picker, spin it like a game show, and hope for the best. The result looks like a family reunion where nobody's related. Build a palette intentionally instead.
 
 ## What Every Palette Needs
@@ -14,11 +13,11 @@ Just four things:
 3. **Semantic colors** — green for success, red for error, yellow for warning. Keep these standard.
 4. **Optional: a secondary accent** — only if you really need it.
 
-You’ll want multiple shades for these colors too. But you don’t need 40 custom colors. You need a good gray scale, one accent, and semantic colors. That’s it. Seriously.
+You'll want multiple shades for these colors too. But you don't need 40 custom colors. You need a good gray scale, one accent, and semantic colors. That's it. Seriously.
 
 ## About Palette Generators
 
-Sorry, but you can’t build UIs with only 5 colors. Pick a primary color (we’ll talk about how in a sec), and work from there.
+Sorry, but you can't build UIs with only 5 colors. Pick a primary color (we'll talk about how in a sec), and work from there.
 
 ## Building Your Gray Scale
 
@@ -35,6 +34,7 @@ Generate 9–11 shades from light to dark. In most design systems, you'd have 50
 ## Picking Your Primary
 
 One color. It should:
+
 - Stand out from your grays
 - Not be neon (unless you want rave vibes)
 - Work at multiple shades for hover and active states

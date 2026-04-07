@@ -2,11 +2,12 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-"I'll make the text slightly gray... it looks more modern." Then nobody can actually read it. Contrast isn't about aesthetics. It’s about whether people can actually read your UI, or if they’ll need a magnifying glass and a prayer..
+"I'll make the text slightly gray... it looks more modern." Then nobody can actually read it. Contrast isn't about aesthetics. It's about whether people can actually read your UI, or if they'll need a magnifying glass and a prayer..
 
 ## The Standards
 
 WCAG (the accessibility police) says:
+
 - **3:1** — minimum for large text (18px+ or 14px+ bold)
 - **4.5:1** — minimum for normal body text
 - **7:1** — preferred for easy reading

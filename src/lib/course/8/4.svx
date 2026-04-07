@@ -2,7 +2,7 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-The default styles that browsers apply to HTML elements are… fine. They’re functional. But “functional” and “designed” are not the same thing. Here’s how to reset and rebuild your baseline so you’re not starting from a place of browser mediocrity.
+The default styles that browsers apply to HTML elements are… fine. They're functional. But "functional" and "designed" are not the same thing. Here's how to reset and rebuild your baseline so you're not starting from a place of browser mediocrity.
 
 ## What the Browser Gets Wrong
 
@@ -60,38 +60,54 @@ Tailwind's `@tailwind base` handles most of this.
 ## Minimum CSS Reset
 
 ```css
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  color: #1f2937;
-  background-color: #f9fafb;
+	font-family:
+		system-ui,
+		-apple-system,
+		sans-serif;
+	line-height: 1.5;
+	color: #1f2937;
+	background-color: #f9fafb;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
-button, input, textarea, select {
-  font: inherit;
+button,
+input,
+textarea,
+select {
+	font: inherit;
 }
 
-img, video, svg {
-  display: block;
-  max-width: 100%;
+img,
+video,
+svg {
+	display: block;
+	max-width: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
 }
 ```
 

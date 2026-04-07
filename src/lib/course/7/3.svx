@@ -4,7 +4,7 @@
 
 You control every pixel of your interface. You can't control what users upload, type, or paste. User-generated content is the wildcard that breaks beautiful layouts. The only defense is designing defensively.
 
-## What Can Go Wrong Will Go Wrong (Murphy’s Law for UIs)
+## What Can Go Wrong Will Go Wrong (Murphy's Law for UIs)
 
 - **Long unbroken strings:** URLs or usernames with no spaces that stretch cards infinitely
 - **Missing images:** A profile picture never uploaded, what shows instead?

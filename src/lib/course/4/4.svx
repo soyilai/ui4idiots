@@ -2,8 +2,7 @@
     import Preview from "$lib/components/Preview.svelte"
 </script>
 
-
-There are a handful of typography errors that get made again and again. They're not taste issues, they’re “why does my app look like a ransom note?” issues. Here are the repeat offenders and how to fix them.
+There are a handful of typography errors that get made again and again. They're not taste issues, they're "why does my app look like a ransom note?" issues. Here are the repeat offenders and how to fix them.
 
 ### Problem 1: Invisible Text
 
@@ -31,7 +30,7 @@ Fix: Use a type scale with at least 3–4 different size/weight combinations.
 
 ### Crime 5: Decorative Fonts for Body
 
-That handwritten or display font you love? Gorgeous at 48px in a hero. At 14px in a paragraph, it’s a migraine.
+That handwritten or display font you love? Gorgeous at 48px in a hero. At 14px in a paragraph, it's a migraine.
 
 Fix: Use personality fonts for headlines only. Pair with a readable sans-serif for body.
 
